@@ -1,0 +1,293 @@
+extends ./includes/template.pug
+
+block title
+    | Genealogy - Main
+
+
+block content
+    include ./includes/header.pug
+    section.initial-screen
+        .container
+            .row
+                .col-lg-12
+                    .initial-screen__head
+                        h2.initial-screen__headline Новости
+                        a(
+                            href="#"
+                        ).initial-screen__all-news
+                            span.initial-screen__all-news__text Все новости
+                            span.initial-screen__all-news__arrow
+                                <svg class="initial-screen__all-news__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                    <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                </svg>
+                    .initial-screen__middle
+                        .initial-screen__middle__left
+                            .initial-screen__few-news
+                                a(
+                                    href="#"
+                                ).initial-screen__news
+                                    span.initial-screen__news__date 15 сентября
+                                    span.initial-screen__news__title Цифровые технологии на службе архивного дела
+                                a(
+                                    href="#"
+                                ).initial-screen__news
+                                    span.initial-screen__news__date 14 сентября
+                                    span.initial-screen__news__title Специфика изучения генеалогии различных сословных и социальных общностей
+                                a(
+                                    href="#"
+                                ).initial-screen__news
+                                    span.initial-screen__news__date 11 сентября
+                                    span.initial-screen__news__title Названы этнические процессы в гетерогенной этнокультурной среде
+                        .initial-screen__middle__right
+                            a(
+                                href="#"
+                            ).initial-screen__main-news
+                                img(
+                                    src="assets/tmp/1.jpg"
+                                ).initial-screen__main-news__image
+                                span.initial-screen__main-news__linear
+                                span.initial-screen__main-news__top-layer
+                                    span.initial-screen__main-news__date 14 сентября
+                                    span.initial-screen__main-news__title Участие нашей команды в работе различных научных конференций
+                    .initial-screen__mobile
+                        a(
+                            href="#"
+                        ).initial-screen__all-news
+                            span.initial-screen__all-news__text Все новости
+                            span.initial-screen__all-news__arrow
+                                <svg class="initial-screen__all-news__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                    <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                </svg>
+    section.events
+        .container
+            .row
+                .col-lg-12
+                    .events__head
+                        h2.events__headline События
+                        a(
+                            href="#"
+                        ).events__all-events
+                            span.events__all-events__text Все события
+                            span.events__all-events__arrow
+                                <svg class="events__all-events__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                    <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                </svg>
+        .container.events__shell-events
+            .row
+                .col-lg-4.col-md-6
+                    a(
+                        href="#"
+                    ).events__event
+                        img(
+                            src="assets/tmp/2.jpg"
+                        ).events__event__picture
+                        span.events__event__info
+                            span.events__event__date 15 сентября
+                            span.events__event__title Открытие выставки “225 лет российской национальной библиотеки”
+                .col-lg-4.col-md-6
+                    a(
+                        href="#"
+                    ).events__event
+                        span.events__event__coming скоро!
+                        img(
+                            src="assets/tmp/3.jpg"
+                        ).events__event__picture
+                        span.events__event__info
+                            span.events__event__date 23 сентября
+                            span.events__event__title Презентация новых технологий в области архивного дела
+                .col-lg-4.col-md-6
+                    a(
+                        href="#"
+                    ).events__event
+                        img(
+                            src="assets/tmp/4.jpg"
+                        ).events__event__picture
+                        span.events__event__info
+                            span.events__event__date 5 октября
+                            span.events__event__title Выстака к 100-летию красной армии
+        .container
+            .row
+                .col-lg-12
+                    .events__mobile
+                        a(
+                            href="#"
+                        ).events__all-events
+                            span.events__all-events__text Все события
+                            span.events__all-events__arrow
+                                <svg class="events__all-events__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                    <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                </svg>
+    section.articles
+        .container
+            .row
+                .col-lg-12
+                    .articles__head
+                        h2.articles__headline Статьи
+                        a(
+                            href="#"
+                        ).articles__all-articles
+                            span.articles__all-articles__text Все статьи
+                            span.articles__all-articles__arrow
+                                <svg class="articles__all-articles__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                    <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                </svg>
+                .col-lg-6.col-md-6
+                    a(
+                        href="#"
+                    ).articles__article
+                        img(
+                            src="assets/tmp/5.jpg"
+                        ).articles__article__picture
+                        span.articles__article__info
+                            span.articles__article__date 15 сентября
+                            span.articles__article__title Родословная как способ осмысления реалий времени
+                .col-lg-6.col-md-6
+                    a(
+                        href="#"
+                    ).articles__article
+                        img(
+                            src="assets/tmp/6.jpg"
+                        ).articles__article__picture
+                        span.articles__article__info
+                            span.articles__article__date 12 сентября
+                            span.articles__article__title Александр Пашинин. Метрические книги как источник составления родословных.
+                .col-lg-6.col-md-6
+                    a(
+                        href="#"
+                    ).articles__article
+                        img(
+                            src="assets/tmp/7.jpg"
+                        ).articles__article__picture
+                        span.articles__article__info
+                            span.articles__article__date 11 сентября
+                            span.articles__article__title Статьи и публикации неравнодушных к генеалогии людей 
+                .col-lg-6.col-md-6
+                    a(
+                        href="#"
+                    ).articles__article
+                        img(
+                            src="assets/tmp/8.jpg"
+                        ).articles__article__picture
+                        span.articles__article__info
+                            span.articles__article__date 09 сентября
+                            span.articles__article__title Указатель видов документов, содержащих генеалогическую информацию
+                .col-lg-12
+                    .articles__mobile
+                        a(
+                            href="#"
+                        ).articles__all-articles
+                            span.articles__all-articles__text Все события
+                            span.articles__all-articles__arrow
+                                <svg class="articles__all-articles__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                    <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                </svg>
+    section.services
+        .container
+            .row
+                .col-lg-6.col-md-7
+                    h2.services__headline Услуги
+                    p.services__description Наш портал специализируется на предоставлении услуг в сфере генеалогии, выберите нужную и заказжите — это просто!
+                .col-lg-6.col-md-5
+                    .services__picture-shell
+                        img(
+                            src="assets/img/services.svg"
+                        ).services__picture
+                .col-lg-6
+                    .services__links
+                        a(
+                            href="#"
+                        ).services__link
+                            span.services__link__text Построение <br class="br_lg"> генеалогического древа
+                            span.services__link__arrow
+                                <svg class="services__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                    <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                </svg>
+                        a(
+                            href="#"
+                        ).services__link
+                            span.services__link__text Проведение <br class="br_lg"> генеалогического исследования
+                            span.services__link__arrow
+                                <svg class="services__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                    <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                </svg>
+                        a(
+                            href="#"
+                        ).services__link
+                            span.services__link__text Выдача архивной справки
+                            span.services__link__arrow
+                                <svg class="services__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                    <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                </svg>
+    footer.footer
+        .container
+            .row
+                .col-lg-5.footer__mobile-order-2
+                    .footer__logo
+                        img(
+                            src="assets/img/logo-white.svg"
+                        ).footer__logo__image
+                        .footer__logo__right
+                            p.footer__logo__right__copyright © 2020 портал «Генеалогия»
+                            a(
+                                href="#"
+                            ).footer__logo__right__policy Политика конфиденциальности
+                .col-lg-7.footer__mobile-order-1
+                    .footer__columns
+                        .footer__columns__column
+                            p.footer__columns__title Информация
+                            .footer__columns__links
+                                a(
+                                    href="#"
+                                ).footer__columns__link Руководство
+                                a(
+                                    href="#"
+                                ).footer__columns__link Структура
+                                a(
+                                    href="#"
+                                ).footer__columns__link Цели и задачи
+                                a(
+                                    href="#"
+                                ).footer__columns__link Вакансии
+                                a(
+                                    href="#"
+                                ).footer__columns__link Контакты
+                        .footer__columns__column
+                            p.footer__columns__title Услуги
+                            .footer__columns__links
+                                a(
+                                    href="#"
+                                ).footer__columns__link Выдача архивной справки
+                                a(
+                                    href="#"
+                                ).footer__columns__link Построение генеалогического древа
+                                a(
+                                    href="#"
+                                ).footer__columns__link Проведение генеалогического исследования
+                        .footer__columns__column
+                            p.footer__columns__title База знаний
+                            .footer__columns__links
+                                a(
+                                    href="#"
+                                ).footer__columns__link Алфавитный список фамилий
+                                a(
+                                    href="#"
+                                ).footer__columns__link Справочник населенных пунктов
+                                a(
+                                    href="#"
+                                ).footer__columns__link Документы
+
+
+    
+
+
+                                    
+                            

@@ -1,0 +1,64 @@
+include config.pug
+
+- var versionStyleAndSripts = Date.now();
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        title 
+            block title
+        
+        script.
+            var urlFor = 'genealogy'
+            if (window.location.pathname.indexOf("/works/") == 0) {
+                var base = document.createElement("base");
+                base.setAttribute("href", `/works/${urlFor}/`);
+                document.head.appendChild(base);
+            }
+
+        block metatags
+            meta(
+                name="description" 
+                content=""
+            )
+
+        base(
+            href="/"
+        )
+
+        meta(
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+            )
+        meta(
+            property="og:image" content="./og.jpg"
+            )
+        meta(
+            property="og:title" content=""
+            )
+
+        //- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        //- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+        
+
+        block links
+            link(
+                href="assets/css/main.css?v-"+versionStyleAndSripts
+                rel="stylesheet"
+            )
+            
+            <link rel="shortcut icon" href="favicon.ico">
+
+            
+    body
+        .stick
+            block content
+        
+        script(
+            src="assets/js/common.js?v-"+versionStyleAndSripts
+        )

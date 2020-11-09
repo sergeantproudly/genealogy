@@ -1,0 +1,144 @@
+.events
+    padding: 70px 0 75px 0
+    &__head
+        display: flex
+        align-items: flex-start
+        align-content: flex-start
+        justify-content: space-between
+        margin: 0 0 33px 0
+    &__headline
+        font-weight: 500
+        font-size: 50px
+        color: #112D3D
+    &__all-events
+        display: inline-flex
+        align-items: center
+        align-content: center
+        text-decoration: none
+        margin: 33px 0 0 0
+        &:hover &__arrow
+            background-color: #242C53
+            svg path
+                fill: #fff
+        &__text
+            font-size: 16px
+            text-transform: uppercase
+            color: #112D3D
+            margin: 0 10px 0 0
+            transform: translateY(2px)
+        &__arrow
+            min-width: 22px
+            min-height: 22px
+            border-radius: 50%
+            display: inline-flex
+            align-items: center
+            align-content: center
+            justify-content: center
+            border: 1px solid #112D3D
+            &__picture
+                width: 7px
+                path
+                    fill: #242C53
+    &__event
+        background: #FFFFFF
+        box-shadow: 0px 12px 34px #E7EAF1
+        border-radius: 3px
+        display: block
+        text-decoration: none
+        height: 100%
+        position: relative
+        transition: 0.3s
+        &:hover
+            box-shadow: 0px 18px 34px #E7EAF1
+            transform: scale(1.03)
+            opacity: 0.8
+        &__coming
+            position: absolute
+            left: 0
+            top: 39px
+            font-weight: 500
+            font-size: 17px
+            line-height: 20px
+            color: #FFFFFF
+            padding: 3px 11px 7px 10px
+            background: #4B973F
+            border-radius: 0 3px 3px 0
+        &__picture
+            width: 100%
+            height: 365px
+            object-fit: cover
+            border-radius: 3px
+            display: block
+        &__info
+            padding: 39px 50px 39px 30px
+            display: block
+        &__date
+            line-height: 16px
+            text-transform: uppercase
+            color: #939393
+            margin: 0 0 16px 0
+            display: block
+        &__title
+            font-weight: 500
+            font-size: 20px
+            line-height: 23px
+            color: #112D3D
+            display: block
+    &__shell-events
+    &__mobile
+        display: none
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .events
+        padding: 29px 0 48px 0
+        &__head
+            margin: 0 0 27px 0
+        &__event
+            &__picture
+                height: 340px
+            &__date
+                margin: 0 0 13px 0
+            &__title
+                font-size: 18px
+                line-height: 21px
+            &__info
+                padding: 30px 50px 39px 30px
+        &__shell-events
+            .col-lg-4:last-child
+                display: none
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .events
+        padding: 29px 0 31px 0
+        &__head
+            margin: 0 0 20px 0
+        &__headline
+            font-size: 30px
+        &__head &__all-events
+            display: none
+        &__event
+            &__coming
+                font-size: 14px
+                top: 34px
+                padding: 2px 11px 2px 10px
+            &__picture
+                height: 176px
+            &__date
+                margin: 0 0 10px 0
+            &__title
+                font-size: 18px
+                line-height: 21px
+            &__info
+                padding: 32px 63px 31px 23px
+        &__shell-events
+            .col-lg-4
+                margin: 0 0 15px 0
+        &__mobile
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: center
+        &__all-events
+            margin: 29px 0 0 0
+            &__text
+                font-size: 14px

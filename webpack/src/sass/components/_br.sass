@@ -1,0 +1,19 @@
+.br
+    &_md
+        display: none
+    &_xs
+        display: none
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .br
+        &_lg
+            display: none
+        &_md
+            display: block
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .br
+        &_lg
+            display: none
+        &_md
+            display: none
+        &_xs
+            display: block
