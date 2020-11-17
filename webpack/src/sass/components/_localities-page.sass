@@ -1,0 +1,24 @@
+.localities-page
+    padding: 0 0 62px 0
+    &__headline
+        font-weight: 500
+        font-size: 36px
+        line-height: 42px
+        margin: 0 0 30px 0
+    .default-search
+        margin: 0 0 35px 0
+
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .localities-page
+        padding: 0 0 50px 0
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .localities-page
+        padding: 0 0 47px 0
+        &__headline
+            font-size: 20px
+            line-height: 23px
+            margin: 0 0 13px 0
+        .default-search
+            margin: 0 0 23px 0

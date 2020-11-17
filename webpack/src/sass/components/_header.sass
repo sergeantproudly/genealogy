@@ -12,20 +12,20 @@
   &__mobile
     height: 100%
   &__language
-    border-right: 1px solid rgba(255,255,255,.2)
-    border-left: 1px solid rgba(255,255,255,.2)
     height: 100%
-    transition: 0.5s
-    &:hover
-      opacity: 0.8
+    position: relative
     &__shell
       padding: 0 14px 0 17px
       border: none
+      border-right: 1px solid rgba(255,255,255,.2)
+      border-left: 1px solid rgba(255,255,255,.2)
       background-color: transparent
       display: flex
       align-items: center
       align-content: center
       height: 100%
+      transition: 0.1s
+      &:hover
       &__text
         color: #fff
         margin: 0 8px 0 0
@@ -33,6 +33,73 @@
       &__arrow
         vertical-align: middle
         display: inline-block
+    &_active-2 &__shell
+      background-color: #fff
+    &_active-2 &__shell__text
+      color: #112D3D
+    &_active-2 &__shell__arrow path
+      fill: #112D3D
+
+    &_active-1 &__dropdown 
+      display: block
+    &_active-2 &__dropdown
+      opacity: 1
+      transform: translateY(0px)
+    &__dropdown
+      left: 0
+      border-radius: 0px 0 5px 5px
+      position: absolute
+      top: calc(100% + 0px)
+      background: #FFFFFF
+      box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06)
+      padding: 7px
+      opacity: 0
+      transform: translateY(10px)
+      transition: 0.1s
+      display: none
+      z-index: 11
+      &__line
+        font-size: 14px
+        line-height: 17px
+        color: #000
+        text-decoration: none
+        display: flex
+        vertical-align: middle
+        margin: 0 0 1px 0
+        padding: 11px 20px 11px 13px
+        &_current,
+        &:hover
+          // font-weight: 600
+          background: #F7F7FA
+          border-radius: 2px
+        &:last-child
+          margin: 0
+        &__icon
+          margin: 0 16px 0 0
+          display: inline-block
+          vertical-align: middle
+        &__text
+          transition: .35s
+          // opacity: 0.6
+          font-size: 16px
+          vertical-align: middle
+          transform: translateY(0px)
+          display: inline-block
+    &_active-2 &__close
+      display: block
+    &__close
+      position: fixed
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      display: none
+      width: 100%
+      height: 100%
+      background-color: transparent
+      border: none
+      z-index: 10
+      cursor: default
   &__profile-desktop
     border-left: 1px solid rgba(255,255,255,.2)
     border-right: 1px solid rgba(255,255,255,.2)
@@ -82,11 +149,15 @@
 @media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
   .header
     &__language
-      border-left: none
-      padding: 0 16px 0 0px
       &__shell
+        padding: 0 16px 0 15px
+        border-left: none
+        transform: translateX(-15px)
         &__text
           font-size: 16px
+      &__dropdown
+        left: -15px
+        border-radius: 0px 0 5px 0
     &__desktop
       display: none
     &__mobile
@@ -97,9 +168,13 @@
     &__between
       height: 44px
     &__language
-      border-left: none
       &__shell
-        padding: 0 14px 0 0px
+        border-left: none
+        transform: translateX(-15px)
+        padding: 0 14px 0 15px
+      &__dropdown
+        left: -15px
+        border-radius: 0px 0 5px 0
     &__profile-mobile
       padding: 0 17px
       &__picture

@@ -1,0 +1,48 @@
+.letter-with-a-list
+    border-bottom: 1px solid #EBEBEB
+    padding: 0 0 27px 0
+    margin: 0 0 30px 0
+    &:last-child
+        border-bottom: none
+    &__letter
+        font-weight: 500
+        font-size: 40px
+        line-height: 47px
+        color: #242C53
+        margin: 0 0 22px 0
+    &__list
+        display: flex
+        align-items: flex-start
+        align-content: flex-start
+        align-items: flex-start
+        flex-wrap: wrap
+        &__column
+            width: 16%
+    &__word
+        margin: 0 0 7px 0
+        font-size: 16px
+        color: #242C53
+        text-decoration: none
+        border: none
+        background-color: transparent
+        display: block
+        &:hover
+            text-decoration: underline
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .letter-with-a-list
+        &__list
+            &__column
+                width: 25%
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .letter-with-a-list
+        padding: 0 0 17px 0
+        margin: 0 0 25px 0
+        &__list
+            &__column
+                width: 50%
+        &__letter
+            font-size: 26px
+            line-height: 31px
+            margin: 0 0 16px 0
+        &__word
+            font-size: 14px

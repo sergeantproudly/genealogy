@@ -1,0 +1,119 @@
+.management
+    padding: 0 0 62px 0
+    &__headline
+        font-weight: 500
+        font-size: 36px
+        line-height: 42px
+        margin: 0 0 30px 0
+    
+    &__members
+        display: flex
+        align-items: stretch
+        align-content: stretch
+        justify-content: flex-start
+        flex-wrap: wrap
+        width: calc(100% + 50px)
+        transform: translateX(-25px)
+    &__member
+        width: 25%
+        margin: 0 0 52px 0
+        &__indent
+            margin: 0 25px
+            background: #FFFFFF
+            box-shadow: 0px 12px 34px #E7EAF1
+            border-radius: 3px
+            display: block
+            text-decoration: none
+            height: 100%
+            position: relative
+            transition: 0.3s
+        &:hover &__indent
+            // box-shadow: 0px 18px 34px #E7EAF1
+            // transform: scale(1.03)
+            // opacity: 0.8
+        &__picture
+            width: 100%
+            height: 300px
+            object-fit: cover
+            border-radius: 3px
+            display: block
+        &__info
+            padding: 30px 19px 32px 19px
+            display: block
+        &__name
+            font-size: 20px
+            line-height: 23px
+            color: #242C53
+            margin: 0 0 10px 0
+            display: block
+            font-weight: 500
+        &__role
+            font-size: 14px
+            line-height: 16px
+            color: #242C53
+            display: block
+            opacity: 0.5
+
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .management
+        padding: 0 0 50px 0
+        &__members
+            width: calc(100% + 30px)
+            transform: translateX(-15px)
+        &__member
+            width: 33%
+            margin: 0 0 30px 0
+            &__indent
+                margin: 0 15px
+            &__picture
+                height: 245px
+            &__info
+                padding: 25px 16px 26px 16px
+            &__name
+                font-size: 18px
+                line-height: 21px
+                margin: 0 0 12px 0
+            &__role
+                font-size: 12px
+                line-height: 14px
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .management
+        padding: 0 0 23px 0
+        &__headline
+            font-size: 20px
+            line-height: 23px
+            margin: 0 0 13px 0
+        &__members
+            width: calc(100% + 14px)
+            transform: translateX(-7px)
+        &__member
+            width: 50%
+            margin: 0 0 15px 0
+            &__indent
+                margin: 0 7px
+            &__picture
+                height: 155px
+            &__info
+                padding: 19px 7px 21px 7px
+            &__name
+                font-size: 14px
+                line-height: 16px
+                margin: 0 0 8px 0
+                position: relative
+                overflow: hidden
+                padding: 0 50% 0 0
+                &:after
+                    content: ""
+                    width: 27px
+                    height: 100%
+                    background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 87.04%)
+                    right: 0
+                    top: 0
+                    bottom: 0
+                    display: block
+                    position: absolute
+            &__role
+                font-size: 12px
+                line-height: 14px

@@ -1,0 +1,80 @@
+.are-you-sure
+    position: fixed
+    left: 50%
+    top: 50%
+    height: calc(100vh + 100px)
+    width: 100vw
+    transform: translate(-50%, -50%)
+    padding: 70px 20px
+    background: rgba(18, 22, 30, 0.53)
+    align-items: center
+    align-content: center
+    justify-content: center
+    z-index: 1000
+
+    display: none
+    &_active
+        display: flex
+    &__back
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        height: 100%
+        width: 100%
+        z-index: 1
+        border: none
+        background-color: transparent
+    &__shell
+        width: 416px
+        padding: 45px
+        z-index: 2
+        position: relative
+        background-color: #fff
+        border-radius: 10px
+    &__hedline
+        margin: 0 0 28px 0
+        font-weight: 500
+        font-size: 18px
+        line-height: 21px
+        text-align: center
+        color: #242C53
+    &__actions
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: center
+    &__cancel
+        padding: 0 36px
+        height: 50px
+        background: #F0F3F9
+        border-radius: 24px
+        margin: 0 14px 0 0
+        border: none
+        color: #112D3D
+        transition: 0.3s
+        display: inline-flex
+        align-items: center
+        align-content: center
+        justify-content: center
+        position: relative
+        font-size: 18px
+        text-decoration: none
+        &:hover
+            background: #E8EDF6
+        &:active
+            background: #E8EDF6
+            box-shadow: 0px 4px 16px rgba(50, 82, 148, 0.42)
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .are-you-sure
+        &__hedline
+            margin: 0 0 17px 0
+            font-size: 16px
+            line-height: 19px
+        &__shell
+            width: 290px
+            padding: 30px 6px
+        &__cancel
+            padding: 0 16px
+            margin: 0 10px 0 0

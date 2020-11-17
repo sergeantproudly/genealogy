@@ -1,0 +1,249 @@
+.orders-page
+    padding: 0 0 62px 0
+    &__headline
+        font-weight: 500
+        font-size: 36px
+        line-height: 42px
+        margin: 0 0 30px 0
+    &__order
+        background: #FFFFFF
+        box-shadow: 0px 12px 34px #E7EAF1
+        border-radius: 4px
+        padding: 22px 22px 22px 25px
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: flex-start
+        flex-wrap: wrap
+        position: relative
+        margin: 0 0 20px 0
+        &::after
+            width: 2px
+            position: absolute
+            height: 100%
+            left: 0
+            top: 0
+            content: ""
+            background: #323B67
+            border-radius: 10px
+        &__col
+            &-1
+                width: 11%
+            &-2
+                width: 10%
+            &-3
+                width: 34%
+            &-4
+                width: 15%
+            &-5
+                width: 30%
+                display: flex
+                align-items: center
+                align-content: center
+                justify-content: flex-end
+                flex-wrap: wrap
+        &__value
+            margin: 0 0 20px 0
+            &__label
+                font-weight: 300
+                font-size: 12px
+                line-height: 14px
+                color: #6F6F6F
+                margin: 0 0 6px 0
+            &__text
+                font-size: 16px
+                line-height: 19px
+                color: #112D3D
+                &_done,
+                &_pending,
+                &_in-process
+                    &:before
+                        width: 9px
+                        height: 9px
+                        display: inline-block
+                        content: ""
+                        margin: 0 7px 0 0
+                        border-radius: 50%
+                &_done:before
+                        background: #7CCE14
+                &_pending:before
+                        background: #FFAA2C
+                &_in-process:before
+                        background: #3B5C9F
+        &__delete,
+        &__view
+            height: 50px
+            border-radius: 24px
+            font-size: 16px
+            transition: 0.3s
+            display: inline-flex
+            align-items: center
+            align-content: center
+            justify-content: center
+            text-decoration: none
+            padding: 0 29px
+            width: auto
+        &__delete
+            margin: 0 12px 0 0
+            border: 1px solid #C4C4C4
+            color: rgba(36,44,83,0.5)
+            background-color: transparent
+            &:hover
+                color: #FC5245
+                border: 1px solid #FC5245
+        &__view
+            background: #325294
+            border: none
+            color: rgba(255,255,255,1)
+            &:hover
+                background: #2C4A87
+                box-shadow: 0px 4px 16px rgba(50, 82, 148, 0.42)
+            &:disabled
+                color: rgba(255,255,255,.5)
+            &:active
+                background: #1E3970
+
+    &__empty
+        margin: 78px 0 0 0
+        &__headline
+            font-weight: 500
+            font-size: 36px
+            line-height: 42px
+            color: #242C53
+            text-align: center
+            margin: 0 0 15px 0
+        &__description
+            text-align: center
+            font-size: 16px
+            line-height: 19px
+            color: #242C53
+            opacity: 0.6
+            margin: 0 0 44px 0
+        &__service
+            padding: 0px 48px 50px 48px
+            background: #F0F3F9
+            border-radius: 4px
+            min-height: 100%
+            display: block
+            text-decoration: none
+            transition: 0.3s
+            &:hover
+                background: #E0E6F1
+            &__illustration
+                display: block
+                height: 216px
+                position: relative
+                &_1 &__picture
+                    transform: translate(-51%, -47%) scale(0.8)
+                &_2 &__picture
+                    transform: translate(-49%, -50%) scale(0.8)
+                &_3 &__picture
+                    transform: translate(-49%, -49%) scale(0.8)
+                &__picture
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    // transform: translate(-50%, -50%)
+            &__headline
+                font-weight: 500
+                font-size: 18px
+                line-height: 21px
+                text-align: center
+                color: #112D3D
+                display: block
+
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .orders-page
+        padding: 0 0 50px 0
+        &__order
+            padding: 22px 22px 5px 25px
+            &__col
+                &-1
+                    width: 40%
+                    order: 1
+                &-2
+                    width: 100%
+                    order: 3
+                &-3
+                    width: 100%
+                    order: 4
+                &-4
+                    width: 100%
+                    order: 5
+                &-5
+                    order: 2
+                    width: 60%
+            &__value
+                margin: 0 0 18px 0
+        &__empty
+            margin: 67px 0 0 0
+            &__service
+                padding: 0px 30px 45px 30px
+            &__service-margin
+                margin: 0 0 30px 0
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .orders-page
+        padding: 0 0 37px 0
+        &__headline
+            font-size: 20px
+            line-height: 23px
+            margin: 0 0 13px 0
+        &__order
+            padding: 22px 17px 34px 17px
+            &__col
+                &-1
+                    width: 100%
+                    order: 1
+                &-2
+                    width: 100%
+                    order: 2
+                &-3
+                    width: 100%
+                    order: 3
+                &-4
+                    width: 100%
+                    order: 4
+                &-5
+                    order: 5
+                    width: 100%
+            &__value
+                margin: 0 0 15px 0
+                &__text
+                    font-size: 14px
+                    line-height: 16px
+            &__delete,
+            &__view
+                width: 100%
+            &__delete
+                order: 2
+                margin: 18px 0 0 0
+            &__view
+                order: 1
+                margin: 10px 0 0 0
+        &__empty
+            margin: 37px 0 0 0
+            &__headline
+                font-size: 16px
+                line-height: 19px
+                margin: 0 0 10px 0
+            &__description
+                font-size: 14px
+                line-height: 16px
+                margin: 0 0 28px 0
+            &__service
+                padding: 0px 15px 35px 15px
+                &__illustration
+                    height: 183px
+                    &_1 &__picture
+                        transform: translate(-52%, -47%) scale(0.71)
+                    &_2 &__picture
+                        transform: translate(-51%, -50%) scale(0.7)
+                    &_3 &__picture
+                        transform: translate(-52%, -49%) scale(0.65)
+                &__headline
+                    font-size: 16px
+                    line-height: 19px
+            &__service-margin
+                margin: 0 0 16px 0

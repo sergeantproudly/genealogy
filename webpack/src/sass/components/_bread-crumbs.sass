@@ -1,0 +1,24 @@
+.bread-crumbs
+    text-decoration: none
+    display: block
+    &__arrow
+        display: inline-block
+        vertical-align: middle
+        margin: 0 10px 0 0
+        path
+            transition: 0.3s
+    &__text
+        vertical-align: middle
+        color: #85889B
+        transition: 0.3s
+    &:hover &__arrow path
+        fill: #242C53
+    &:hover &__text
+        color: #242C53
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .bread-crumbs
+        &__arrow
+            width: 16px
+            margin: 0 8px 0 0
+        &__text
+            font-size: 12px

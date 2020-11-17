@@ -1,0 +1,147 @@
+.tabs-with-headline
+
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .tabs-with-headline
+        &__tab
+            &__text
+                font-size: 18px !important
+                padding: 16px 17px 8px 17px !important
+
+@media (min-width: #{map-get($grid-breakpoints, md)})
+    .tabs-with-headline
+        .bread-crumbs
+            margin: 28px 0 0px 0
+        .bread-crumbs + &__headline
+            margin: 23px 0 38px 0
+        &__headline
+            font-weight: 500
+            font-size: 50px
+            line-height: 59px
+            margin: 57px 0 38px 0
+        &__tabs
+            margin: 0px 0 36px 0
+        &__tab
+            text-decoration: none
+            display: inline-block
+            border-top: 1px solid transparent
+            border-left: 1px solid transparent
+            border-right: 1px solid transparent
+            &__text
+                font-size: 20px
+                line-height: 23px
+                color: rgba(42, 44, 83, 0.5)
+                padding: 16px 34px 8px 34px
+                display: inline-block
+                transform: translateY(-8px)
+                transition: 0.3s
+                &__count
+                    width: 22px
+                    height: 22px
+                    background: #F0F3F9
+                    border-radius: 50%
+                    display: inline-flex
+                    align-items: center
+                    align-content: center
+                    justify-content: center
+                    font-size: 16px
+                    color: rgba(36,44,83,0.4)
+                    margin: 0 0 0 9px
+                    &_active
+                        background: #3B5C9F
+                        color: #FFFFFF
+            &:hover &__text,
+            &_active &__text
+                color: rgba(42, 44, 83, 1)
+            &_active &__text
+                border-top: 1px solid #D2D2D2
+                border-left: 1px solid #D2D2D2
+                border-right: 1px solid #D2D2D2
+                border-radius: 8px 8px 0 0
+                &::after
+                    right: calc(100% + 4px)
+            &_active
+                position: relative
+                &::before,
+                &::after
+                    content: ""
+                    width: 100vw
+                    height: 8px
+                    position: absolute
+                    bottom: 0px
+                &::before
+                    left: calc(100% + -1px)
+                    border-radius: 0 0 0 8px
+                    border-bottom: 1px solid #D2D2D2
+                    border-left: 1px solid #D2D2D2
+                    border-top: 1px solid transparent
+                    border-right: 1px solid transparent
+                &::after
+                    right: calc(100% + -1px)
+                    border-radius: 0 0 8px 0
+                    border-bottom: 1px solid #D2D2D2
+                    border-right: 1px solid #D2D2D2
+                    border-top: 1px solid transparent
+                    border-left: 1px solid transparent
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .tabs-with-headline
+        .bread-crumbs
+            margin: 26px 0 0px 0
+        .bread-crumbs + &__headline
+            margin: 14px 0 13px 0
+        &__headline
+            font-weight: 500
+            font-size: 26px
+            line-height: 31px
+            margin: 27px 0 13px 0
+        &__tabs
+            margin: 0px 0 25px 0
+            padding: 0 15px
+            width: calc(100% + 30px)
+            transform: translateX(-15px)
+            display: flex
+            align-items: flex-start
+            align-content: flex-start
+            justify-content: flex-start
+            overflow-x: auto
+            &::-webkit-scrollbar
+                width: 0px
+        &__tab
+            text-decoration: none
+            &_active &__text
+                background: #242C53
+                color: #FFFFFF
+                border: none
+            &_active &__text__count
+                background: rgba(255,255,255,0.22)
+                color: rgba(255,255,255,0.5)
+            &:last-child &__text
+                margin: 0 15px 0 0 
+            &__text
+                height: 42px
+                padding: 0 19px
+                margin: 0 7px 0 0
+                border: 1px solid #D2D2D2
+                border-radius: 33px
+                color: #242C53
+                display: flex
+                align-items: center
+                align-content: center
+                justify-content: center
+                white-space: nowrap
+                &__count
+                    width: 18px
+                    height: 18px
+                    background: #F0F3F9
+                    border-radius: 50%
+                    display: inline-flex
+                    align-items: center
+                    align-content: center
+                    justify-content: center
+                    font-size: 14px
+                    color: rgba(36,44,83,0.4)
+                    margin: 0 0 0 5px
+                    &_active
+                        background: #3B5C9F
+                        color: #FFFFFF

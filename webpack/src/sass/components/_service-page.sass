@@ -1,0 +1,148 @@
+.service-page
+    padding: 54px 0 31px 0
+    overflow: hidden
+    &__headline
+        font-weight: 500
+        font-size: 50px
+        color: #112D3D
+        margin: 0 0 29px 0
+    &__links
+    &__link
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: flex-start
+        flex-wrap: wrap
+        text-decoration: none
+        position: relative
+        background: #F0F3F9
+        border-radius: 3px
+        padding: 0 30px 0 0
+        margin: 0 0 54px 0
+        min-height: 140px
+        transition: 0.3s
+        &:hover
+            background-color: #E0E6F1
+        &:hover &__arrow
+            background-color: #5E699B
+        &:hover &__arrow__picture 
+            path
+                fill: #fff
+        &__illustration
+            width: 300px
+            position: relative
+            height: 210px
+            display: block
+            &_1 &__picture
+                transform: translate(-56%, -50%)
+            &_2 &__picture
+                transform: translate(-55%, -50%)
+            &_3 &__picture
+                transform: translate(-49%, -52%)
+            &__picture
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+        &__info
+            padding: 0 156px 0 0
+            width: calc(100% - 350px)
+        &__name
+            font-weight: 500
+            font-size: 26px
+            line-height: 31px
+            color: #112D3D
+            display: block
+            margin: 0 0 14px 0
+        &__description
+            font-size: 18px
+            line-height: 21px
+            color: #676767
+            display: block
+        &__arrow
+            width: 50px
+            height: 50px
+            border: 2px solid #5E699B
+            border-radius: 50%
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: center
+            &__picture
+                width: 16px
+                transition: 0.3s
+                path
+                    fill: #5E699B
+                    transition: 0.3s
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .service-page
+        padding: 23px 0 18px 0
+        &__headline
+            margin: 0px 0 31px 0
+        &__links
+            margin: 0px 0 0 0
+        &__link
+            position: relative
+            margin: 0 0 31px 0
+            &__illustration
+                width: 260px
+                height: 233px
+                transform: scale(0.9)
+                &_1 &__picture
+                    transform: translate(-56%, -47%)
+                &_2 &__picture
+                    transform: translate(-55%, -55%)
+                &_3 &__picture
+                    transform: translate(-52%, -58%)
+            &__info
+                padding: 0 0px 0 0
+                width: calc(100% - 260px)
+            &__arrow
+                position: absolute
+                bottom: 20px
+                right: 20px
+            &__description
+                font-size: 16px
+                line-height: 19px
+            &__arrow
+                width: 36px
+                height: 36px
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .service-page
+        padding: 26px 0 13px 0
+        &__headline
+            font-size: 26px
+            margin: 0 0 18px 0
+        &__link
+            position: relative
+            margin: 0 0 15px 0
+            padding: 0 0 70px 0
+            &__illustration
+                width: 100%
+                height: 194px
+                &_1 &__picture
+                    transform: translate(-49%, -48%) scale(0.67)
+                &_2 &__picture
+                    transform: translate(-47%, -49%) scale(0.7)
+                &_3 &__picture
+                    transform: translate(-48%, -50%) scale(0.6)
+            &__info
+                padding: 0 26px 0 26px
+                width: 100%
+            &__name
+                font-size: 18px
+                line-height: 21px
+                text-align: center
+            &__description
+                font-size: 14px
+                line-height: 16px
+                text-align: center
+            &__arrow
+                position: absolute
+                bottom: 20px
+                right: 50%
+                transform: translateX(50%)
+                width: 36px
+                height: 36px

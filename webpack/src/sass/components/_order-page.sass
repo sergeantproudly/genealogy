@@ -1,0 +1,135 @@
+.order-page
+    padding: 0 0 62px 0
+    &__headline
+        font-weight: 500
+        font-size: 36px
+        line-height: 42px
+        margin: 0 0 30px 0
+    &__section
+        margin: 0 0 41px 0
+        padding: 0 0 7px 0
+        border-bottom: 1px solid #D2D2D2
+    &__values
+        display: flex
+        align-items: flex-start
+        align-content: flex-start
+        justify-content: flex-start
+        flex-wrap: wrap
+    &__value
+        width: 100%
+        margin: 0 0 30px 0
+        &_short
+            width: 30%
+        &__label
+            font-weight: 300
+            font-size: 12px
+            line-height: 14px
+            color: #6F6F6F
+            margin: 0 0 6px 0
+        &__text
+            font-size: 16px
+            line-height: 19px
+            color: #112D3D
+            &_disabled
+                opacity: 0.5
+    &__result
+        background: #FFFFFF
+        box-shadow: 0px 12px 34px #E7EAF1
+        border-radius: 4px
+        padding: 24px 19px 19px 35px
+        display: flex
+        align-items: flex-start
+        align-content: flex-start
+        justify-content: flex-start
+        flex-wrap: wrap
+        position: relative
+        margin: 0 0 20px 0
+        &__left
+            width: calc(100% - 130px)
+            display: flex
+            align-items: flex-start
+            align-content: flex-start
+            justify-content: flex-start
+            flex-wrap: wrap
+        &__icon
+            width: 70px
+            &__picture
+                width: 45px
+        &__info
+            padding: 6px 30px 0 0
+            width: calc(100% - 70px)
+        &__name
+            font-weight: 500
+            font-size: 18px
+            line-height: 21px
+            color: #242C53
+            margin: 0 0 10px 0
+        &__size
+            font-weight: 500
+            font-size: 12px
+            line-height: 14px
+            color: #979797
+        &__download
+            width: 130px
+            height: 50px
+            border-radius: 24px
+            font-size: 16px
+            transition: 0.3s
+            display: inline-flex
+            align-items: center
+            align-content: center
+            justify-content: center
+            text-decoration: none
+            padding: 0 29px
+            background: #325294
+            border: none
+            color: rgba(255,255,255,1)
+            &:hover
+                background: #2C4A87
+                box-shadow: 0px 4px 16px rgba(50, 82, 148, 0.42)
+            &:disabled
+                color: rgba(255,255,255,.5)
+            &:active
+                background: #1E3970
+
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .order-page
+        padding: 0 0 50px 0
+        &__value
+            &_short
+                width: 50%
+        &__result
+            padding: 24px 19px 30px 35px
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .order-page
+        padding: 0 0 21px 0
+        &__headline
+            font-size: 20px
+            line-height: 23px
+            margin: 0 0 13px 0
+        &__value
+            margin: 0 0 20px 0
+            &_short
+                width: 100%
+        &__result
+            padding: 16px 16px 29px 16px
+            &__left
+                width: 100%
+                margin: 0 0 21px 0
+            &__icon
+                width: 42px
+                &__picture
+                    width: 28px
+            &__name
+                font-size: 14px
+                line-height: 16px
+                margin: 0 0 7px 0
+            &__size
+                font-size: 11px
+                line-height: 13px
+            &__info
+                padding: 2px 0 20px 0
+            &__download
+                width: 100%

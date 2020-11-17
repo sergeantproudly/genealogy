@@ -1,0 +1,17 @@
+extends ../includes/template.pug
+
+block title
+    | Genealogy - Are you sure
+
+
+block content
+    .stick__top
+        include ../includes/header.pug
+        +header()
+        .are-you-sure.are-you-sure_active
+            .are-you-sure__back
+            .are-you-sure__shell
+                p.are-you-sure__hedline Вы действительно хотите выйти?
+                .are-you-sure__actions
+                    button.are-you-sure__cancel Отмена
+                    button.default-button.default-button_short Да, выйти

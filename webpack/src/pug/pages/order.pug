@@ -1,0 +1,107 @@
+extends ../includes/template.pug
+
+block title
+    | Genealogy - Order
+
+
+block content
+    .stick__top
+        include ../includes/header.pug
+        +header()
+        section.order-page
+            .container
+                .row
+                    .col-lg-12
+                        .tabs-with-headline
+                            a(href="#").bread-crumbs
+                                <svg class="bread-crumbs__arrow" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 22C17.0652 22 22 17.0656 22 11C22 4.93441 17.0652 0 11 0C4.93484 0 0 4.93441 0 11C0 17.0656 4.93484 22 11 22ZM11 0.854369C16.5944 0.854369 21.1456 5.40559 21.1456 11C21.1456 16.5944 16.5944 21.1456 11 21.1456C5.40559 21.1456 0.854368 16.5944 0.854368 11C0.854368 5.40559 5.40559 0.854369 11 0.854369Z" fill="#85889B"/>
+                                    <path d="M8.17654 11.3507H14.2994C14.5356 11.3507 14.7266 11.1593 14.7266 10.9235C14.7266 10.6877 14.5356 10.4963 14.2994 10.4963H8.17654C7.94031 10.4963 7.74936 10.6877 7.74936 10.9235C7.74936 11.1593 7.94031 11.3507 8.17654 11.3507Z" fill="#85889B"/>
+                                    <path d="M10.2567 14.1202C10.3515 14.1202 10.4468 14.0886 10.5262 14.024C10.7095 13.875 10.7364 13.6058 10.5873 13.423L8.54282 10.9167L10.3566 8.56848C10.501 8.3818 10.4669 8.11352 10.2798 7.96914C10.0926 7.82432 9.82438 7.8602 9.68084 8.04603L7.65983 10.6625C7.53851 10.8197 7.5415 11.0397 7.66709 11.194L9.92605 13.963C10.0098 14.0663 10.1328 14.1202 10.2567 14.1202Z" fill="#85889B"/>
+                                </svg>
+                                span.bread-crumbs__text Вернуться к заказам
+                            h1.tabs-with-headline__headline Заказ 19486
+                            .tabs-with-headline__tabs
+                                a(
+                                    href="order"
+                                ).tabs-with-headline__tab.tabs-with-headline__tab_active
+                                    span.tabs-with-headline__tab__text Информация
+                                a(
+                                    href="chat"
+                                ).tabs-with-headline__tab
+                                    span.tabs-with-headline__tab__text 
+                                        | Сообщения
+                                        span.tabs-with-headline__tab__text__count.tabs-with-headline__tab__text__count_active 1
+                        .order-page__section
+                            h2.order-page__headline Проведение генеалогического исследования
+                            .order-page__values
+                                .order-page__value
+                                    p.order-page__value__label Дата заказа
+                                    p.order-page__value__text 02.03.2018
+                                .order-page__value
+                                    p.order-page__value__label Статус
+                                    p.order-page__value__text Заказ выполнен
+                                .order-page__value
+                                    p.order-page__value__label Исполнитель
+                                    p.order-page__value__text Ефимов Кирилл Петрович
+                                .order-page__value
+                                    p.order-page__value__label Заказчик
+                                    p.order-page__value__text Светлов Иван Федорович
+                        .order-page__section
+                            h2.order-page__headline Данные о заказе
+                            .order-page__values
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label ФИО
+                                    p.order-page__value__text Светлов Виктор Петровчи
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Мобильный телефон
+                                    p.order-page__value__text 8966384753
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Способ получения запроса
+                                    p.order-page__value__text Личное обращение
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Ваш адрес
+                                    p.order-page__value__text пр. Ибрагимова, д 3, кв. 39
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Email
+                                    p.order-page__value__text пр. Ибрагимова, д 3, кв. 39
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Откуда пришел запрос
+                                    p.order-page__value__text Из РФ
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Способ получение результата
+                                    p.order-page__value__text Лично в архиве
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Вид заявителя
+                                    p.order-page__value__text Физ. лицо
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Вид запроса
+                                    p.order-page__value__text Вид запроса
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Домашний телефон
+                                    p.order-page__value__text 253-47-45
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Социальная категория
+                                    p.order-page__value__text.order-page__value__text_disabled Не выбрана
+                                .order-page__value.order-page__value_short
+                                    p.order-page__value__label Цель запроса
+                                    p.order-page__value__text Генеалогия
+                                .order-page__value
+                                    p.order-page__value__label Содержание запроса
+                                    p.order-page__value__text рожд. Алексеева Екатерина Павловна 1921, с. Шапши, Высокогорий р-н
+                        h2.order-page__headline Результат
+                        .order-page__results
+                            .order-page__result
+                                .order-page__result__left
+                                    .order-page__result__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).order-page__result__icon__picture
+                                    .order-page__result__info
+                                        p.order-page__result__name Генеалогическое исследование Алексеева Екатерина Павловна
+                                        p.order-page__result__size PDF, 844 КБ
+                                a(
+                                    href="#"
+                                ).order-page__result__download Скачать
+                                
+    include ../includes/footer.pug

@@ -1,0 +1,39 @@
+.default-search
+    position: relative
+    &__field
+        height: 50px
+        background: #FBFBFD
+        border: 1px solid #E3E6ED
+        border-radius: 59px
+        width: 100%
+        padding: 0 50px 0 24px
+        &::placeholder
+            color: rgba(115,115,115,.5)
+    &__submit
+        right: 10px
+        width: 40px
+        height: 40px
+        transition: 0.3s
+        border-radius: 50%
+        position: absolute
+        top: 50%
+        border: none
+        transform: translateY(-50%)
+
+        background-image: url("../img/search.svg")
+        background-size: 23px 23px
+        background-repeat: no-repeat
+        background-position: center
+        background-color: transparent
+        &:hover
+            background-color: #E3E6ED
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .default-search
+        &__field
+            height: 40px
+            padding: 0 40px 0 24px
+        &__submit
+            right: 10px
+            width: 30px
+            height: 30px
+            background-size: 18px 18px

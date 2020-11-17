@@ -1,0 +1,43 @@
+.field-with-icon
+    display: block
+    &_error &__error
+        display: block
+    &__error
+        display: none
+        margin: 12px 0 0 0
+        font-weight: 300
+        font-size: 12px
+        line-height: 14px
+        color: #FC5245
+    &_error &__shell
+        border: 1px solid #FC5245
+    &__shell
+        background: #FBFBFD
+        border: 1px solid #B9C1D1
+        border-radius: 3px
+        height: 50px
+        width: 100%
+        display: flex
+    &_user &__icon
+        background-image: url('../img/user-input.svg')
+    &_password &__icon
+        background-image: url('../img/password-input.svg')
+    &__icon
+        width: 50px
+        height: 100%
+        border-right: 1px solid #B9C1D1
+        background-position: center
+        background-repeat: no-repeat
+    &__field
+        width: calc(100% - 50px)
+        height: 100%
+        padding: 0 0 0 16px
+        border: none
+        background-color: transparent
+        font-size: 16px
+        line-height: 19px
+        color: #112D3D
+        &::placeholder
+            color: #C5C5C5
+        &:focus
+            background-color: #fff

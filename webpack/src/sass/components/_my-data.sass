@@ -1,0 +1,133 @@
+.my-data
+    padding: 0 0 62px 0
+    &__headline
+        font-weight: 500
+        font-size: 36px
+        line-height: 42px
+        margin: 0 0 30px 0
+    &__avatar
+        display: flex
+        align-items: flex-start
+        align-content: flex-start
+        justify-content: flex-start
+        margin: 0 0 27px 0
+        &__left
+            width: 122px
+            position: relative
+        &__input-left
+            position: absolute
+            left: 0
+            top: 0
+            opacity: 0
+            z-index: 2
+        &__input-left,
+        &__image,
+        &__empty
+            width: 100px
+            height: 100px
+            border-radius: 50%
+            cursor: pointer
+        &__image
+            display: inline-block
+        &__empty
+            background-color: #B9C1D1
+        &__right
+            padding: 23px 0 0 0
+        &__name
+            font-weight: 500
+            font-size: 20px
+            line-height: 23px
+            color: #000000
+            margin: 0 0 16px 0
+        &__actions
+        &__download
+            border: none
+            background-color: transparent
+            margin: 0 19px 0 0
+            display: inline-block
+            position: relative
+            cursor: pointer
+            &__text
+                display: inline-block
+                vertical-align: middle
+                font-size: 16px
+                line-height: 19px
+                color: #0A0A0A
+                transition: 0.3s
+            &__plus
+                display: inline-block
+                vertical-align: middle
+                margin: 0 8px 0 0
+                vertical-align: middle
+            &__input
+                position: absolute
+                left: 0
+                opacity: 0
+                width: 0
+                height: 0
+                transform: scale(0)
+            &:hover &__text
+                color: #3B5C9F
+        &__delete
+            border: none
+            background-color: transparent
+            &__text
+                display: inline-block
+                vertical-align: middle
+                font-size: 16px
+                line-height: 19px
+                color: #B4B9C4
+                transition: 0.3s
+            &__basket
+                display: inline-block
+                margin: 0 9px 0 0
+                vertical-align: middle
+                path
+                    transition: 0.3s
+            &:hover &__text
+                color: #FC5245
+            &:hover &__basket path
+                fill: #FC5245
+    &__form
+        max-width: 358px
+        .default-field-with-label,
+        .default-radio
+            margin: 0 0 12px 0
+        &__save
+            margin: 32px 0 0 0
+
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .my-data
+        padding: 0 0 50px 0
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .my-data
+        padding: 0 0 37px 0
+        &__headline
+            font-size: 20px
+            line-height: 23px
+            margin: 0 0 13px 0
+        &__avatar
+            &__left
+                width: 110px
+            &__image,
+            &__empty
+                width: 90px
+                height: 90px
+            &__right
+                padding: 5px 0 0 0
+            &__name
+                font-size: 16px
+                line-height: 19px
+                margin: 0 0 13px 0
+            &__download
+                display: block
+                margin: 0 0 9px 0
+                &__text
+                    font-size: 14px
+                    line-height: 16px
+            &__delete
+                &__text
+                    font-size: 14px
+                    line-height: 16px

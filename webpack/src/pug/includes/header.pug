@@ -1,70 +1,133 @@
-header.header
-    .container
-        .row
-            .col-lg-12
-                .header__between
-                    .header__left
-                        .header__language
-                            button.header__language__shell
-                                span.header__language__shell__text Рус
+mixin header()
+    header.header
+        .container
+            .row
+                .col-lg-12
+                    .header__between
+                        .header__left
+                            .header__language
+                                button(
+                                    onclick="closeLanguageDropdown()"
+                                ).header__language__close
+                                button(
+                                    onclick="openLanguageDropdown()"
+                                ).header__language__shell
+                                    span.header__language__shell__text Рус
+                                    <svg class="header__language__shell__arrow" width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.69704 4.9183C3.09686 5.45691 3.90314 5.45691 4.30296 4.9183L6.21236 2.34604C6.70217 1.6862 6.23118 0.75 5.40941 0.75H1.59059C0.76882 0.75 0.29783 1.68619 0.787638 2.34604L2.69704 4.9183Z" fill="white"/>
+                                    </svg>
+                                .header__language__dropdown
+                                    a(
+                                        href="./"
+                                    ).header__language__dropdown__line.header__language__dropdown__line_current
+                                        img(
+                                            src="assets/img/ru.svg"
+                                        ).header__language__dropdown__line__icon
+                                        span.header__language__dropdown__line__text Русский
+                                    a(
+                                        href="./"
+                                    ).header__language__dropdown__line
+                                        img(
+                                            src="assets/img/tartar.svg"
+                                        ).header__language__dropdown__line__icon
+                                        span.header__language__dropdown__line__text Татарский
+                                    a(
+                                        href="./"
+                                    ).header__language__dropdown__line
+                                        img(
+                                            src="assets/img/en.svg"
+                                        ).header__language__dropdown__line__icon
+                                        span.header__language__dropdown__line__text Английский
+                        .header__right
+                            .header__desktop
+                                a(
+                                    href="login-and-registration"
+                                ).header__profile-desktop
+                                    img(
+                                        src="assets/img/desktop-user.svg"
+                                    ).header__profile-desktop__picture
+                                    span.header__profile-desktop__text Личный кабинет
+                            .header__mobile
+                                a(
+                                    href="login-and-registration"
+                                ).header__profile-mobile
+                                    img(
+                                        src="assets/img/mobile-user.svg"
+                                    ).header__profile-mobile__picture
+                                button(
+                                    onclick="openWindowMenu()"
+                                ).header__burger
+                                    img(
+                                        src="assets/img/burger.svg"
+                                    ).header__burger__picture
+    section.menu-main
+        .container
+            .row
+                .col-lg-12
+                    .menu-main__between
+                        .menu-main__left
+                            a(
+                                href=""
+                            ).menu-main__logo
                                 img(
-                                    src="assets/img/arrow-bottom-blue.svg"
-                                ).header__language__shell__arrow
-                    .header__right
-                        .header__desktop
-                            a(
-                                href="#"
-                            ).header__profile-desktop
-                                img(
-                                    src="assets/img/desktop-user.svg"
-                                ).header__profile-desktop__picture
-                                span.header__profile-desktop__text Личный кабинет
-                        .header__mobile
-                            a(
-                                href="#"
-                            ).header__profile-mobile
-                                img(
-                                    src="assets/img/mobile-user.svg"
-                                ).header__profile-mobile__picture
-                            button.header__burger
-                                img(
-                                    src="assets/img/burger.svg"
-                                ).header__burger__picture
-section.menu-main
-    .container
-        .row
-            .col-lg-12
-                .menu-main__between
-                    .menu-main__left
-                        a(
-                            href="#"
-                        ).menu-main__logo
-                            img(
-                                src="assets/img/logo-blue.svg"
-                            ).menu-main__logo__image
-                            span.menu-main__logo__right
-                                span.menu-main__logo__right__top Генеалогия
-                                span.menu-main__logo__right__bottom Татарский портал генеалогических данных 
-                    .menu-main__right
-                        .menu-main__links
-                            a(
-                                href="#"
-                            ).menu-main__link Главная
-                            a(
-                                href="#"
-                            ).menu-main__link База знаний
-                            a(
-                                href="#"
-                            ).menu-main__link Новости
-                            a(
-                                href="#"
-                            ).menu-main__link События
-                            a(
-                                href="#"
-                            ).menu-main__link Статьи
-                            a(
-                                href="#"
-                            ).menu-main__link Услуги
-                            a(
-                                href="#"
-                            ).menu-main__link Информация
+                                    src="assets/img/logo-blue.svg"
+                                ).menu-main__logo__image
+                                span.menu-main__logo__right
+                                    span.menu-main__logo__right__top Генеалогия
+                                    span.menu-main__logo__right__bottom Татарский портал генеалогических данных 
+                        .menu-main__right
+                            .menu-main__links
+                                a(
+                                    href=""
+                                ).menu-main__link.menu-main__link_active Главная
+                                a(
+                                    href="surnames"
+                                ).menu-main__link База знаний
+                                a(
+                                    href="#"
+                                ).menu-main__link Новости
+                                a(
+                                    href="#"
+                                ).menu-main__link События
+                                a(
+                                    href="#"
+                                ).menu-main__link Статьи
+                                a(
+                                    href="#"
+                                ).menu-main__link Услуги
+                                a(
+                                    href="#"
+                                ).menu-main__link Информация
+    .menu-window
+        div(
+            onclick="closeWindowMenu()"
+        ).menu-window__back
+        .menu-window__shell
+            button(
+                onclick="closeWindowMenu()"
+            ).menu-window__shell__close
+                img(
+                    src="assets/img/close.svg"
+                )
+            .menu-window__shell__links
+                a(
+                    href="#"
+                ).menu-window__shell__links__link.menu-window__shell__links__link_active Главная
+                a(
+                    href="surnames/"
+                ).menu-window__shell__links__link База знаний
+                a(
+                    href="#"
+                ).menu-window__shell__links__link Новости
+                a(
+                    href="#"
+                ).menu-window__shell__links__link События
+                a(
+                    href="#"
+                ).menu-window__shell__links__link Статьи
+                a(
+                    href="#"
+                ).menu-window__shell__links__link Услуги
+                a(
+                    href="#"
+                ).menu-window__shell__links__link Информация

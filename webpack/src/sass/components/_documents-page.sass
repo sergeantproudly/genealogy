@@ -1,0 +1,84 @@
+.documents-page
+    padding: 0 0 62px 0
+    &__headline
+        font-weight: 500
+        font-size: 36px
+        line-height: 42px
+        margin: 0 0 30px 0
+    .default-search
+        margin: 0 0 35px 0
+    &__documents
+    &__document
+        display: flex
+        align-items: flex-start
+        align-content: flex-start
+        justify-content: flex-start
+        flex-wrap: wrap
+        position: relative
+        padding: 10px 10px 10px 12px
+        text-decoration: none
+        transition: 0.3s
+        &:hover
+            background: rgba(240, 243, 249, 0.4)
+            border-radius: 3px
+        &__icon
+            width: 90px
+            &__picture
+                width: 45px
+        &__info
+            padding: 6px 30px 0 0
+            width: calc(90% - 90px)
+        &__name
+            font-weight: 500
+            font-size: 18px
+            line-height: 21px
+            color: #242C53
+            margin: 0 0 10px 0
+            display: block
+        &__size
+            font-weight: 500
+            font-size: 12px
+            line-height: 14px
+            color: #979797
+            display: block
+
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .documents-page
+        padding: 0 0 50px 0
+        &__document
+            padding: 0 0 0 0px
+            padding: 10px 0 10px 0
+            &__icon
+            &__info
+                width: calc(100% - 90px)
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .documents-page
+        padding: 0 0 47px 0
+        &__headline
+            font-size: 20px
+            line-height: 23px
+            margin: 0 0 13px 0
+        .default-search
+            margin: 0 0 23px 0
+        &__document
+            border-top: 1px solid #EBEBEB
+            padding: 13px 0 13px 0
+            margin: 0
+            &:last-child
+                border-bottom: 1px solid #EBEBEB
+            &__info
+                width: calc(100% - 42px)
+                padding: 2px 0 0px 0
+            &__icon
+                width: 42px
+                &__picture
+                    width: 28px
+            &__name
+                font-size: 14px
+                line-height: 16px
+                margin: 0 0 7px 0
+            &__size
+                font-size: 11px
+                line-height: 13px

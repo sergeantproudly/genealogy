@@ -17,137 +17,182 @@
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="./og.jpg">
-    <meta property="og:title" content=""><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="assets/css/main.css?v-1604941974176" rel="stylesheet"><link rel="shortcut icon" href="favicon.ico">
+    <meta property="og:title" content=""><link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+          $( "[datepicker]" ).datepicker();
+          $.datepicker.regional['ru']={
+              closeText: 'Закрыть',
+              prevText: '&#x3c;Пред',
+              nextText: 'След&#x3e;',
+              currentText: 'Сегодня',
+              monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+              monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+              dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+              dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+              dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+              weekHeader: 'Нед',
+              dateFormat: 'dd.mm.yy',
+              firstDay: 1,
+              isRTL: false,
+              showMonthAfterYear: false,
+              yearSuffix: ''
+          };
+          $.datepicker.setDefaults($.datepicker.regional['ru']);
+      } );
+      
+      
+    </script><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="assets/css/main.css?v-1605601179480" rel="stylesheet"><link rel="shortcut icon" href="favicon.ico">
   </head>
   <body>
+    <div class="navigation-pages">
+      <div class="navigation-pages__shell"><a href="" onclick="routeAnimation(event)">Главная страница</a><a href="surnames" onclick="routeAnimation(event)">Фамилии</a><a href="result-of-search" onclick="routeAnimation(event)">Результат поиска</a><a href="search-without-results" onclick="routeAnimation(event)">Поиска без результата</a><a href="localities" onclick="routeAnimation(event)">Hаселенные пункты</a><a href="human-settlement" onclick="routeAnimation(event)">Населенный пункт</a><a href="documents" onclick="routeAnimation(event)">Документы</a><a href="login-and-registration" onclick="routeAnimation(event)">Авторизация и регистрация</a><a href="my-data" onclick="routeAnimation(event)">Мои данные</a><a href="orders" onclick="routeAnimation(event)">Заказы</a><a href="order" onclick="routeAnimation(event)">Заказ</a><a href="page-without-orders" onclick="routeAnimation(event)">Страница без заказов</a><a href="are-you-sure" onclick="routeAnimation(event)">Окно выхода</a><a href="chat" onclick="routeAnimation(event)">Чат с исполнителем</a><a href="management" onclick="routeAnimation(event)">Руководство</a><a href="goals-and-objectives" onclick="routeAnimation(event)">Цели и задачи</a><a href="job-openings" onclick="routeAnimation(event)">Вакансии</a><a href="contacts" onclick="routeAnimation(event)">Контакты</a><a href="service-page" onclick="routeAnimation(event)">Услуги</a>
+      </div>
+      <button class="navigation-pages__button" onclick="openNavigationPages()"></button>
+    </div>
     <div class="stick">
-<header class="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="header__between">
-          <div class="header__left">
-            <div class="header__language">
-              <button class="header__language__shell"><span class="header__language__shell__text">Рус</span><img class="header__language__shell__arrow" src="assets/img/arrow-bottom-blue.svg"></button>
-            </div>
-          </div>
-          <div class="header__right">
-            <div class="header__desktop"><a class="header__profile-desktop" href="#"><img class="header__profile-desktop__picture" src="assets/img/desktop-user.svg"><span class="header__profile-desktop__text">Личный кабинет</span></a></div>
-            <div class="header__mobile"><a class="header__profile-mobile" href="#"><img class="header__profile-mobile__picture" src="assets/img/mobile-user.svg"></a>
-              <button class="header__burger"><img class="header__burger__picture" src="assets/img/burger.svg"></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-<section class="menu-main">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="menu-main__between">
-          <div class="menu-main__left"><a class="menu-main__logo" href="#"><img class="menu-main__logo__image" src="assets/img/logo-blue.svg"><span class="menu-main__logo__right"><span class="menu-main__logo__right__top">Генеалогия</span><span class="menu-main__logo__right__bottom">Татарский портал генеалогических данных </span></span></a></div>
-          <div class="menu-main__right">
-            <div class="menu-main__links"><a class="menu-main__link" href="#">Главная</a><a class="menu-main__link" href="#">База знаний</a><a class="menu-main__link" href="#">Новости</a><a class="menu-main__link" href="#">События</a><a class="menu-main__link" href="#">Статьи</a><a class="menu-main__link" href="#">Услуги</a><a class="menu-main__link" href="#">Информация</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-      <section class="initial-screen">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="initial-screen__head">
-                <h2 class="initial-screen__headline">Новости</h2><a class="initial-screen__all-news" href="#"><span class="initial-screen__all-news__text">Все новости</span><span class="initial-screen__all-news__arrow"><svg class="initial-screen__all-news__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
-<path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
-</svg></span></a>
-              </div>
-              <div class="initial-screen__middle">
-                <div class="initial-screen__middle__left">
-                  <div class="initial-screen__few-news"><a class="initial-screen__news" href="#"><span class="initial-screen__news__date">15 сентября</span><span class="initial-screen__news__title">Цифровые технологии на службе архивного дела</span></a><a class="initial-screen__news" href="#"><span class="initial-screen__news__date">14 сентября</span><span class="initial-screen__news__title">Специфика изучения генеалогии различных сословных и социальных общностей</span></a><a class="initial-screen__news" href="#"><span class="initial-screen__news__date">11 сентября</span><span class="initial-screen__news__title">Названы этнические процессы в гетерогенной этнокультурной среде</span></a></div>
+      <div class="stick__top">
+                <header class="header">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="header__between">
+                          <div class="header__left">
+                            <div class="header__language">
+                              <button class="header__language__close" onclick="closeLanguageDropdown()"></button>
+                              <button class="header__language__shell" onclick="openLanguageDropdown()"><span class="header__language__shell__text">Рус</span><svg class="header__language__shell__arrow" width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.69704 4.9183C3.09686 5.45691 3.90314 5.45691 4.30296 4.9183L6.21236 2.34604C6.70217 1.6862 6.23118 0.75 5.40941 0.75H1.59059C0.76882 0.75 0.29783 1.68619 0.787638 2.34604L2.69704 4.9183Z" fill="white"/>
+</svg>
+                              </button>
+                              <div class="header__language__dropdown"><a class="header__language__dropdown__line header__language__dropdown__line_current" href="./"><img class="header__language__dropdown__line__icon" src="assets/img/ru.svg"><span class="header__language__dropdown__line__text">Русский</span></a><a class="header__language__dropdown__line" href="./"><img class="header__language__dropdown__line__icon" src="assets/img/tartar.svg"><span class="header__language__dropdown__line__text">Татарский</span></a><a class="header__language__dropdown__line" href="./"><img class="header__language__dropdown__line__icon" src="assets/img/en.svg"><span class="header__language__dropdown__line__text">Английский</span></a></div>
+                            </div>
+                          </div>
+                          <div class="header__right">
+                            <div class="header__desktop"><a class="header__profile-desktop" href="login-and-registration"><img class="header__profile-desktop__picture" src="assets/img/desktop-user.svg"><span class="header__profile-desktop__text">Личный кабинет</span></a></div>
+                            <div class="header__mobile"><a class="header__profile-mobile" href="login-and-registration"><img class="header__profile-mobile__picture" src="assets/img/mobile-user.svg"></a>
+                              <button class="header__burger" onclick="openWindowMenu()"><img class="header__burger__picture" src="assets/img/burger.svg"></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <section class="menu-main">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="menu-main__between">
+                          <div class="menu-main__left"><a class="menu-main__logo" href=""><img class="menu-main__logo__image" src="assets/img/logo-blue.svg"><span class="menu-main__logo__right"><span class="menu-main__logo__right__top">Генеалогия</span><span class="menu-main__logo__right__bottom">Татарский портал генеалогических данных </span></span></a></div>
+                          <div class="menu-main__right">
+                            <div class="menu-main__links"><a class="menu-main__link menu-main__link_active" href="">Главная</a><a class="menu-main__link" href="surnames">База знаний</a><a class="menu-main__link" href="#">Новости</a><a class="menu-main__link" href="#">События</a><a class="menu-main__link" href="#">Статьи</a><a class="menu-main__link" href="#">Услуги</a><a class="menu-main__link" href="#">Информация</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <div class="menu-window">
+                  <div class="menu-window__back" onclick="closeWindowMenu()"></div>
+                  <div class="menu-window__shell">
+                    <button class="menu-window__shell__close" onclick="closeWindowMenu()"><img src="assets/img/close.svg"></button>
+                    <div class="menu-window__shell__links"><a class="menu-window__shell__links__link menu-window__shell__links__link_active" href="#">Главная</a><a class="menu-window__shell__links__link" href="surnames/">База знаний</a><a class="menu-window__shell__links__link" href="#">Новости</a><a class="menu-window__shell__links__link" href="#">События</a><a class="menu-window__shell__links__link" href="#">Статьи</a><a class="menu-window__shell__links__link" href="#">Услуги</a><a class="menu-window__shell__links__link" href="#">Информация</a></div>
+                  </div>
                 </div>
-                <div class="initial-screen__middle__right"><a class="initial-screen__main-news" href="#"><img class="initial-screen__main-news__image" src="assets/tmp/1.jpg"><span class="initial-screen__main-news__linear"></span><span class="initial-screen__main-news__top-layer"><span class="initial-screen__main-news__date">14 сентября</span><span class="initial-screen__main-news__title">Участие нашей команды в работе различных научных конференций</span></span></a></div>
-              </div>
-              <div class="initial-screen__mobile"><a class="initial-screen__all-news" href="#"><span class="initial-screen__all-news__text">Все новости</span><span class="initial-screen__all-news__arrow"><svg class="initial-screen__all-news__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
-<path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
-</svg></span></a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="events">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="events__head">
-                <h2 class="events__headline">События</h2><a class="events__all-events" href="#"><span class="events__all-events__text">Все события</span><span class="events__all-events__arrow"><svg class="events__all-events__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <section class="initial-screen">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="initial-screen__head">
+                  <h2 class="initial-screen__headline">Новости</h2><a class="initial-screen__all-news" href="#"><span class="initial-screen__all-news__text">Все новости</span><span class="initial-screen__all-news__arrow"><svg class="initial-screen__all-news__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
 <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
 </svg></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container events__shell-events">
-          <div class="row">
-            <div class="col-lg-4 col-md-6"><a class="events__event" href="#"><img class="events__event__picture" src="assets/tmp/2.jpg"><span class="events__event__info"><span class="events__event__date">15 сентября</span><span class="events__event__title">Открытие выставки “225 лет российской национальной библиотеки”</span></span></a></div>
-            <div class="col-lg-4 col-md-6"><a class="events__event" href="#"><span class="events__event__coming">скоро!</span><img class="events__event__picture" src="assets/tmp/3.jpg"><span class="events__event__info"><span class="events__event__date">23 сентября</span><span class="events__event__title">Презентация новых технологий в области архивного дела</span></span></a></div>
-            <div class="col-lg-4 col-md-6"><a class="events__event" href="#"><img class="events__event__picture" src="assets/tmp/4.jpg"><span class="events__event__info"><span class="events__event__date">5 октября</span><span class="events__event__title">Выстака к 100-летию красной армии</span></span></a></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="events__mobile"><a class="events__all-events" href="#"><span class="events__all-events__text">Все события</span><span class="events__all-events__arrow"><svg class="events__all-events__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </div>
+                <div class="initial-screen__middle">
+                  <div class="initial-screen__middle__left">
+                    <div class="initial-screen__few-news"><a class="initial-screen__news" href="#"><span class="initial-screen__news__date">15 сентября</span><span class="initial-screen__news__title">Цифровые технологии на службе архивного дела</span></a><a class="initial-screen__news" href="#"><span class="initial-screen__news__date">14 сентября</span><span class="initial-screen__news__title">Специфика изучения генеалогии различных сословных и социальных общностей</span></a><a class="initial-screen__news" href="#"><span class="initial-screen__news__date">11 сентября</span><span class="initial-screen__news__title">Названы этнические процессы в гетерогенной этнокультурной среде</span></a></div>
+                  </div>
+                  <div class="initial-screen__middle__right"><a class="initial-screen__main-news" href="#"><img class="initial-screen__main-news__image" src="assets/tmp/1.jpg"><span class="initial-screen__main-news__linear"></span><span class="initial-screen__main-news__top-layer"><span class="initial-screen__main-news__date">14 сентября</span><span class="initial-screen__main-news__title">Участие нашей команды в работе различных научных конференций</span></span></a></div>
+                </div>
+                <div class="initial-screen__mobile"><a class="initial-screen__all-news" href="#"><span class="initial-screen__all-news__text">Все новости</span><span class="initial-screen__all-news__arrow"><svg class="initial-screen__all-news__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
 <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
 </svg></span></a></div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="articles">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="articles__head">
-                <h2 class="articles__headline">Статьи</h2><a class="articles__all-articles" href="#"><span class="articles__all-articles__text">Все статьи</span><span class="articles__all-articles__arrow"><svg class="articles__all-articles__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </section>
+        <section class="events">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="events__head">
+                  <h2 class="events__headline">События</h2><a class="events__all-events" href="#"><span class="events__all-events__text">Все события</span><span class="events__all-events__arrow"><svg class="events__all-events__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
 <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
 </svg></span></a>
+                </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6"><a class="articles__article" href="#"><img class="articles__article__picture" src="assets/tmp/5.jpg"><span class="articles__article__info"><span class="articles__article__date">15 сентября</span><span class="articles__article__title">Родословная как способ осмысления реалий времени</span></span></a></div>
-            <div class="col-lg-6 col-md-6"><a class="articles__article" href="#"><img class="articles__article__picture" src="assets/tmp/6.jpg"><span class="articles__article__info"><span class="articles__article__date">12 сентября</span><span class="articles__article__title">Александр Пашинин. Метрические книги как источник составления родословных.</span></span></a></div>
-            <div class="col-lg-6 col-md-6"><a class="articles__article" href="#"><img class="articles__article__picture" src="assets/tmp/7.jpg"><span class="articles__article__info"><span class="articles__article__date">11 сентября</span><span class="articles__article__title">Статьи и публикации неравнодушных к генеалогии людей </span></span></a></div>
-            <div class="col-lg-6 col-md-6"><a class="articles__article" href="#"><img class="articles__article__picture" src="assets/tmp/8.jpg"><span class="articles__article__info"><span class="articles__article__date">09 сентября</span><span class="articles__article__title">Указатель видов документов, содержащих генеалогическую информацию</span></span></a></div>
-            <div class="col-lg-12">
-              <div class="articles__mobile"><a class="articles__all-articles" href="#"><span class="articles__all-articles__text">Все события</span><span class="articles__all-articles__arrow"><svg class="articles__all-articles__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          </div>
+          <div class="container events__shell-events">
+            <div class="row">
+              <div class="col-lg-4 col-md-6"><a class="events__event" href="#"><img class="events__event__picture" src="assets/tmp/2.jpg"><span class="events__event__info"><span class="events__event__date">15 сентября</span><span class="events__event__title">Открытие выставки “225 лет российской национальной библиотеки”</span></span></a></div>
+              <div class="col-lg-4 col-md-6"><a class="events__event" href="#"><span class="events__event__coming">скоро!</span><img class="events__event__picture" src="assets/tmp/3.jpg"><span class="events__event__info"><span class="events__event__date">23 сентября</span><span class="events__event__title">Презентация новых технологий в области архивного дела</span></span></a></div>
+              <div class="col-lg-4 col-md-6"><a class="events__event" href="#"><img class="events__event__picture" src="assets/tmp/4.jpg"><span class="events__event__info"><span class="events__event__date">5 октября</span><span class="events__event__title">Выстака к 100-летию красной армии</span></span></a></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="events__mobile"><a class="events__all-events" href="#"><span class="events__all-events__text">Все события</span><span class="events__all-events__arrow"><svg class="events__all-events__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
 <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
 </svg></span></a></div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="services">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-7">
-              <h2 class="services__headline">Услуги</h2>
-              <p class="services__description">Наш портал специализируется на предоставлении услуг в сфере генеалогии, выберите нужную и заказжите — это просто!</p>
+        </section>
+        <section class="articles">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="articles__head">
+                  <h2 class="articles__headline">Статьи</h2><a class="articles__all-articles" href="#"><span class="articles__all-articles__text">Все статьи</span><span class="articles__all-articles__arrow"><svg class="articles__all-articles__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+<path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+</svg></span></a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6"><a class="articles__article" href="#"><img class="articles__article__picture" src="assets/tmp/5.jpg"><span class="articles__article__info"><span class="articles__article__date">15 сентября</span><span class="articles__article__title">Родословная как способ осмысления реалий времени</span></span></a></div>
+              <div class="col-lg-6 col-md-6"><a class="articles__article" href="#"><img class="articles__article__picture" src="assets/tmp/6.jpg"><span class="articles__article__info"><span class="articles__article__date">12 сентября</span><span class="articles__article__title">Александр Пашинин. Метрические книги как источник составления родословных.</span></span></a></div>
+              <div class="col-lg-6 col-md-6"><a class="articles__article" href="#"><img class="articles__article__picture" src="assets/tmp/7.jpg"><span class="articles__article__info"><span class="articles__article__date">11 сентября</span><span class="articles__article__title">Статьи и публикации неравнодушных к генеалогии людей </span></span></a></div>
+              <div class="col-lg-6 col-md-6"><a class="articles__article" href="#"><img class="articles__article__picture" src="assets/tmp/8.jpg"><span class="articles__article__info"><span class="articles__article__date">09 сентября</span><span class="articles__article__title">Указатель видов документов, содержащих генеалогическую информацию</span></span></a></div>
+              <div class="col-lg-12">
+                <div class="articles__mobile"><a class="articles__all-articles" href="#"><span class="articles__all-articles__text">Все события</span><span class="articles__all-articles__arrow"><svg class="articles__all-articles__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+<path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+</svg></span></a></div>
+              </div>
             </div>
-            <div class="col-lg-6 col-md-5">
-              <div class="services__picture-shell"><img class="services__picture" src="assets/img/services.svg"></div>
-            </div>
-            <div class="col-lg-6">
-              <div class="services__links"><a class="services__link" href="#"><span class="services__link__text">Построение <br class="br_lg"> генеалогического древа</span><span class="services__link__arrow"><svg class="services__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          </div>
+        </section>
+        <section class="services">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-7">
+                <h2 class="services__headline">Услуги</h2>
+                <p class="services__description">Наш портал специализируется на предоставлении услуг в сфере генеалогии, выберите нужную и заказжите — это просто!</p>
+              </div>
+              <div class="col-lg-6 col-md-5">
+                <div class="services__picture-shell"><img class="services__picture" src="assets/img/services.svg"></div>
+              </div>
+              <div class="col-lg-6">
+                <div class="services__links"><a class="services__link" href="#"><span class="services__link__text">Построение <br class="br_lg"> генеалогического древа</span><span class="services__link__arrow"><svg class="services__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
 <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
 </svg></span></a><a class="services__link" href="#"><span class="services__link__text">Проведение <br class="br_lg"> генеалогического исследования</span><span class="services__link__arrow"><svg class="services__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,41 +201,42 @@
 </svg></span></a><a class="services__link" href="#"><span class="services__link__text">Выдача архивной справки</span><span class="services__link__arrow"><svg class="services__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
 <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
-</svg></span></a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 footer__mobile-order-2">
-              <div class="footer__logo"><img class="footer__logo__image" src="assets/img/logo-white.svg">
-                <div class="footer__logo__right">
-                  <p class="footer__logo__right__copyright">© 2020 портал «Генеалогия»</p><a class="footer__logo__right__policy" href="#">Политика конфиденциальности</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-7 footer__mobile-order-1">
-              <div class="footer__columns">
-                <div class="footer__columns__column">
-                  <p class="footer__columns__title">Информация</p>
-                  <div class="footer__columns__links"><a class="footer__columns__link" href="#">Руководство</a><a class="footer__columns__link" href="#">Структура</a><a class="footer__columns__link" href="#">Цели и задачи</a><a class="footer__columns__link" href="#">Вакансии</a><a class="footer__columns__link" href="#">Контакты</a></div>
-                </div>
-                <div class="footer__columns__column">
-                  <p class="footer__columns__title">Услуги</p>
-                  <div class="footer__columns__links"><a class="footer__columns__link" href="#">Выдача архивной справки</a><a class="footer__columns__link" href="#">Построение генеалогического древа</a><a class="footer__columns__link" href="#">Проведение генеалогического исследования</a></div>
-                </div>
-                <div class="footer__columns__column">
-                  <p class="footer__columns__title">База знаний</p>
-                  <div class="footer__columns__links"><a class="footer__columns__link" href="#">Алфавитный список фамилий</a><a class="footer__columns__link" href="#">Справочник населенных пунктов</a><a class="footer__columns__link" href="#">Документы</a></div>
-                </div>
+</svg>         </span></a></div>
               </div>
             </div>
           </div>
+        </section>
+      </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 footer__mobile-order-2">
+        <div class="footer__logo"><img class="footer__logo__image" src="assets/img/logo-white.svg">
+          <div class="footer__logo__right">
+            <p class="footer__logo__right__copyright">© 2020 портал «Генеалогия»</p><a class="footer__logo__right__policy" href="#">Политика конфиденциальности</a>
+          </div>
         </div>
-      </footer>
+      </div>
+      <div class="col-lg-7 footer__mobile-order-1">
+        <div class="footer__columns">
+          <div class="footer__columns__column">
+            <p class="footer__columns__title">Информация</p>
+            <div class="footer__columns__links"><a class="footer__columns__link" href="#">Руководство</a><a class="footer__columns__link" href="#">Структура</a><a class="footer__columns__link" href="#">Цели и задачи</a><a class="footer__columns__link" href="#">Вакансии</a><a class="footer__columns__link" href="#">Контакты</a></div>
+          </div>
+          <div class="footer__columns__column">
+            <p class="footer__columns__title">Услуги</p>
+            <div class="footer__columns__links"><a class="footer__columns__link" href="#">Выдача архивной справки</a><a class="footer__columns__link" href="#">Построение генеалогического древа</a><a class="footer__columns__link" href="#">Проведение генеалогического исследования</a></div>
+          </div>
+          <div class="footer__columns__column">
+            <p class="footer__columns__title">База знаний</p>
+            <div class="footer__columns__links"><a class="footer__columns__link" href="#">Алфавитный список фамилий</a><a class="footer__columns__link" href="#">Справочник населенных пунктов</a><a class="footer__columns__link" href="#">Документы</a></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="assets/js/common.js?v-1604941974176"></script>
+  </div>
+</footer>
+    </div>
+    <script src="assets/js/common.js?v-1605601179480"></script>
   </body>
 </html>

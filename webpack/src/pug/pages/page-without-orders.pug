@@ -1,0 +1,51 @@
+extends ../includes/template.pug
+
+block title
+    | Genealogy - Orders
+
+
+block content
+    .stick__top
+        include ../includes/header.pug
+        +header()
+        section.orders-page
+            .container
+                .row
+                    .col-lg-12
+                        .tabs-with-headline
+                            h2.tabs-with-headline__headline Личный кабинет
+                            .tabs-with-headline__tabs
+                                a(
+                                    href="my-data"
+                                ).tabs-with-headline__tab
+                                    span.tabs-with-headline__tab__text Мои данные
+                                a(
+                                    href="orders"
+                                ).tabs-with-headline__tab.tabs-with-headline__tab_active 
+                                    span.tabs-with-headline__tab__text Заказы
+                        .orders-page__empty
+                            p.orders-page__empty__headline На данный момент, у вас нет заказов
+                            p.orders-page__empty__description Выберите одну из наших услуг ниже, чтобы оформить заказ
+                    .col-lg-4.orders-page__empty__service-margin.col-md-6
+                        a(href="#").orders-page__empty__service
+                            span.orders-page__empty__service__illustration.orders-page__empty__service__illustration_1
+                                img(
+                                    src="assets/img/illustration-service-1.svg"
+                                ).orders-page__empty__service__illustration__picture
+                            span.orders-page__empty__service__headline Построение <br class="br_lg br_md br_xs"> генеалогического древа
+                    .col-lg-4.orders-page__empty__service-margin.col-md-6
+                        a(href="#").orders-page__empty__service
+                            span.orders-page__empty__service__illustration.orders-page__empty__service__illustration_2
+                                img(
+                                    src="assets/img/illustration-service-2.svg"
+                                ).orders-page__empty__service__illustration__picture
+                            span.orders-page__empty__service__headline Проведение генеалогического <br class="br_md br_xs"> исследования
+                    .col-lg-4.orders-page__empty__service-margin.col-md-6
+                        a(href="#").orders-page__empty__service
+                            span.orders-page__empty__service__illustration.orders-page__empty__service__illustration_3
+                                img(
+                                    src="assets/img/illustration-service-3.svg"
+                                ).orders-page__empty__service__illustration__picture
+                            span.orders-page__empty__service__headline Выдача архивной справки
+                                
+    include ../includes/footer.pug
