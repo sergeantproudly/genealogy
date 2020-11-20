@@ -75,7 +75,7 @@ html(lang="ru")
                 rel="stylesheet"
             )
             
-            <link rel="shortcut icon" href="favicon.ico">
+            <link rel="shortcut icon" href="assets/favicons/favicon.ico">
 
             
     body
@@ -105,6 +105,23 @@ html(lang="ru")
                 ['Вакансии', 'job-openings'],
                 ['Контакты', 'contacts'],
                 ['Услуги', 'service-page'],
+
+                ['Лендинг - 1', 'landing-1'],
+                ['Лендинг - 2', 'landing-2'],
+                ['Лендинг - 3', 'landing-3'],
+
+                ['События', 'events'],
+                ['Статьи', 'articles'],
+                ['Новости', 'news'],
+                
+                ['404', 'not-found'],
+                
+                ['Статья', 'article'],
+                ['Событие', 'event'],
+                
+                ['Восстановление пароля 1', 'password-recovery-1'],
+                ['Восстановление пароля 2', 'password-recovery-2'],
+                ['Успешное восстановление пароля', 'password-recovery-success'],
             ] 
 
         .navigation-pages
@@ -115,8 +132,7 @@ html(lang="ru")
             button(
                 onclick="openNavigationPages()"
             ).navigation-pages__button
-        .stick
-            block content
+        block content
         
         script(
             src="assets/js/common.js?v-"+versionStyleAndSripts

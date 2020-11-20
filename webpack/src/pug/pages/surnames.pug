@@ -5,163 +5,164 @@ block title
 
 
 block content
-    .stick__top
-        include ../includes/header.pug
-        +header()
-        section.surnames-page
-            .container
-                .row
-                    .col-lg-12
-                        .tabs-with-headline
-                            h2.tabs-with-headline__headline База знаний
-                            .tabs-with-headline__tabs
-                                a(
-                                    href="surnames"
-                                ).tabs-with-headline__tab.tabs-with-headline__tab_active
-                                    span.tabs-with-headline__tab__text Фамилии
-                                a(
-                                    href="localities"
-                                ).tabs-with-headline__tab
-                                    span.tabs-with-headline__tab__text Hаселенные пункты
-                                a(
-                                    href="documents"
-                                ).tabs-with-headline__tab
-                                    span.tabs-with-headline__tab__text Документы
-                        h1.surnames-page__headline Фамилии
-                        form.default-search
-                            input(
-                                type="text"
-                                placeholder="Поиск по фамилии"
-                            ).default-search__field
-                            button.default-search__submit
-                        .letter-with-a-list
-                            p.letter-with-a-list__letter А
-                            .letter-with-a-list__list
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Абакулов
-                                    a(href="#").letter-with-a-list__word Абакумов
-                                    a(href="#").letter-with-a-list__word Абакшин
-                                    a(href="#").letter-with-a-list__word Абалешев
-                                    a(href="#").letter-with-a-list__word Абалий
-                                    a(href="#").letter-with-a-list__word Абалин
-                                    a(href="#").letter-with-a-list__word Абалиш
-                                    a(href="#").letter-with-a-list__word Абалия
-                                    a(href="#").letter-with-a-list__word Абалмасов
-                                    a(href="#").letter-with-a-list__word Абальи
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Абамелик
-                                    a(href="#").letter-with-a-list__word Абамеликов
-                                    a(href="#").letter-with-a-list__word Абамелин
-                                    a(href="#").letter-with-a-list__word Абанасимов
-                                    a(href="#").letter-with-a-list__word Абаносимов
-                                    a(href="#").letter-with-a-list__word Абаримов
-                                    a(href="#").letter-with-a-list__word Абаринов
-                                    a(href="#").letter-with-a-list__word Абасов
-                                    a(href="#").letter-with-a-list__word Абаткин
-                                    a(href="#").letter-with-a-list__word Абатуров
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Абациев
-                                    a(href="#").letter-with-a-list__word Абашелин
-                                    a(href="#").letter-with-a-list__word Абашидзе
-                                    a(href="#").letter-with-a-list__word Абалешев
-                                    a(href="#").letter-with-a-list__word Абалий
-                                    a(href="#").letter-with-a-list__word Абалин
-                                    a(href="#").letter-with-a-list__word Абалиш
-                                    a(href="#").letter-with-a-list__word Абалия
-                                    a(href="#").letter-with-a-list__word Абалмасов
-                                    a(href="#").letter-with-a-list__word Абамелин
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Абакулов
-                                    a(href="#").letter-with-a-list__word Абакумов
-                                    a(href="#").letter-with-a-list__word Абакшин
-                                    a(href="#").letter-with-a-list__word Абалешев
-                                    a(href="#").letter-with-a-list__word Абалий
-                                    a(href="#").letter-with-a-list__word Абалин
-                                    a(href="#").letter-with-a-list__word Абалиш
-                                    a(href="#").letter-with-a-list__word Абалия
-                                    a(href="#").letter-with-a-list__word Абалмасов
-                                    a(href="#").letter-with-a-list__word Абальи
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Абамелик
-                                    a(href="#").letter-with-a-list__word Абамеликов
-                                    a(href="#").letter-with-a-list__word Абамелин
-                                    a(href="#").letter-with-a-list__word Абанасимов
-                                    a(href="#").letter-with-a-list__word Абаносимов
-                                    a(href="#").letter-with-a-list__word Абаримов
-                                    a(href="#").letter-with-a-list__word Абаринов
-                                    a(href="#").letter-with-a-list__word Абасов
-                                    a(href="#").letter-with-a-list__word Абаткин
-                                    a(href="#").letter-with-a-list__word Абатуров
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Абациев
-                                    a(href="#").letter-with-a-list__word Абашелин
-                                    a(href="#").letter-with-a-list__word Абашидзе
-                                    a(href="#").letter-with-a-list__word Абалешев
-                                    a(href="#").letter-with-a-list__word Абалий
-                                    a(href="#").letter-with-a-list__word Абалин
-                                    a(href="#").letter-with-a-list__word Абалиш
-                        .letter-with-a-list
-                            p.letter-with-a-list__letter Б
-                            .letter-with-a-list__list
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Бендычко
-                                    a(href="#").letter-with-a-list__word Беневелевский
-                                    a(href="#").letter-with-a-list__word Беневитинов
-                                    a(href="#").letter-with-a-list__word Беневоленский
-                                    a(href="#").letter-with-a-list__word Беневольский
-                                    a(href="#").letter-with-a-list__word Беневский
-                                    a(href="#").letter-with-a-list__word Бенедецкий
-                                    a(href="#").letter-with-a-list__word Бенедзкий
-                                    a(href="#").letter-with-a-list__word Бенедиковский
-                                    a(href="#").letter-with-a-list__word Бенедиктов
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Бенедиктович
-                                    a(href="#").letter-with-a-list__word Бенедиктовский
-                                    a(href="#").letter-with-a-list__word Бенедиктор
-                                    a(href="#").letter-with-a-list__word Бенедский
-                                    a(href="#").letter-with-a-list__word Бенедыктович
-                                    a(href="#").letter-with-a-list__word Бенезе
-                                    a(href="#").letter-with-a-list__word Бенек
-                                    a(href="#").letter-with-a-list__word Бенек-фон-Дуве
-                                    a(href="#").letter-with-a-list__word Бенеке-фон-Дуве
-                                    a(href="#").letter-with-a-list__word Бенензон
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Бененсон
-                                    a(href="#").letter-with-a-list__word Бенераф
-                                    a(href="#").letter-with-a-list__word Бенеркин
-                                    a(href="#").letter-with-a-list__word Бенерман
-                                    a(href="#").letter-with-a-list__word Бенескриптов
-                                    a(href="#").letter-with-a-list__word Бенескул
-                                    a(href="#").letter-with-a-list__word Бендычко
-                                    a(href="#").letter-with-a-list__word Беневелевский
-                                    a(href="#").letter-with-a-list__word Беневитинов
-                                    a(href="#").letter-with-a-list__word Беневоленский
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Бендычко
-                                    a(href="#").letter-with-a-list__word Беневелевский
-                                    a(href="#").letter-with-a-list__word Беневитинов
-                                    a(href="#").letter-with-a-list__word Беневоленский
-                                    a(href="#").letter-with-a-list__word Беневольский
-                                    a(href="#").letter-with-a-list__word Беневский
-                                    a(href="#").letter-with-a-list__word Бенедецкий
-                                    a(href="#").letter-with-a-list__word Бенедзкий
-                                    a(href="#").letter-with-a-list__word Бенедиковский
-                                    a(href="#").letter-with-a-list__word Бенедиктов
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Бенедиктович
-                                    a(href="#").letter-with-a-list__word Бенедиктовский
-                                    a(href="#").letter-with-a-list__word Бенедиктор
-                                    a(href="#").letter-with-a-list__word Бенедский
-                                    a(href="#").letter-with-a-list__word Бенедыктович
-                                    a(href="#").letter-with-a-list__word Бенезе
-                                    a(href="#").letter-with-a-list__word Бенек
-                                    a(href="#").letter-with-a-list__word Бенек-фон-Дуве
-                                    a(href="#").letter-with-a-list__word Бенеке-фон-Дуве
-                                    a(href="#").letter-with-a-list__word Бенензон
-                                .letter-with-a-list__list__column
-                                    a(href="#").letter-with-a-list__word Бененсон
-                                    a(href="#").letter-with-a-list__word Бенераф
-                                    a(href="#").letter-with-a-list__word Бенеркин
-                                    a(href="#").letter-with-a-list__word Бенерман
-                                                          
-    include ../includes/footer.pug
+    .stick
+        .stick__top
+            include ../includes/header.pug
+            +header({current: "baza"})
+            section.surnames-page
+                .container
+                    .row
+                        .col-lg-12
+                            .tabs-with-headline
+                                h2.tabs-with-headline__headline База знаний
+                                .tabs-with-headline__tabs
+                                    a(
+                                        href="surnames"
+                                    ).tabs-with-headline__tab.tabs-with-headline__tab_active
+                                        span.tabs-with-headline__tab__text Фамилии
+                                    a(
+                                        href="localities"
+                                    ).tabs-with-headline__tab
+                                        span.tabs-with-headline__tab__text Hаселенные пункты
+                                    a(
+                                        href="documents"
+                                    ).tabs-with-headline__tab
+                                        span.tabs-with-headline__tab__text Документы
+                            h1.surnames-page__headline Фамилии
+                            form.default-search
+                                input(
+                                    type="text"
+                                    placeholder="Поиск по фамилии"
+                                ).default-search__field
+                                button.default-search__submit
+                            .letter-with-a-list
+                                p.letter-with-a-list__letter А
+                                .letter-with-a-list__list
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Абакулов
+                                        a(href="#").letter-with-a-list__word Абакумов
+                                        a(href="#").letter-with-a-list__word Абакшин
+                                        a(href="#").letter-with-a-list__word Абалешев
+                                        a(href="#").letter-with-a-list__word Абалий
+                                        a(href="#").letter-with-a-list__word Абалин
+                                        a(href="#").letter-with-a-list__word Абалиш
+                                        a(href="#").letter-with-a-list__word Абалия
+                                        a(href="#").letter-with-a-list__word Абалмасов
+                                        a(href="#").letter-with-a-list__word Абальи
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Абамелик
+                                        a(href="#").letter-with-a-list__word Абамеликов
+                                        a(href="#").letter-with-a-list__word Абамелин
+                                        a(href="#").letter-with-a-list__word Абанасимов
+                                        a(href="#").letter-with-a-list__word Абаносимов
+                                        a(href="#").letter-with-a-list__word Абаримов
+                                        a(href="#").letter-with-a-list__word Абаринов
+                                        a(href="#").letter-with-a-list__word Абасов
+                                        a(href="#").letter-with-a-list__word Абаткин
+                                        a(href="#").letter-with-a-list__word Абатуров
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Абациев
+                                        a(href="#").letter-with-a-list__word Абашелин
+                                        a(href="#").letter-with-a-list__word Абашидзе
+                                        a(href="#").letter-with-a-list__word Абалешев
+                                        a(href="#").letter-with-a-list__word Абалий
+                                        a(href="#").letter-with-a-list__word Абалин
+                                        a(href="#").letter-with-a-list__word Абалиш
+                                        a(href="#").letter-with-a-list__word Абалия
+                                        a(href="#").letter-with-a-list__word Абалмасов
+                                        a(href="#").letter-with-a-list__word Абамелин
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Абакулов
+                                        a(href="#").letter-with-a-list__word Абакумов
+                                        a(href="#").letter-with-a-list__word Абакшин
+                                        a(href="#").letter-with-a-list__word Абалешев
+                                        a(href="#").letter-with-a-list__word Абалий
+                                        a(href="#").letter-with-a-list__word Абалин
+                                        a(href="#").letter-with-a-list__word Абалиш
+                                        a(href="#").letter-with-a-list__word Абалия
+                                        a(href="#").letter-with-a-list__word Абалмасов
+                                        a(href="#").letter-with-a-list__word Абальи
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Абамелик
+                                        a(href="#").letter-with-a-list__word Абамеликов
+                                        a(href="#").letter-with-a-list__word Абамелин
+                                        a(href="#").letter-with-a-list__word Абанасимов
+                                        a(href="#").letter-with-a-list__word Абаносимов
+                                        a(href="#").letter-with-a-list__word Абаримов
+                                        a(href="#").letter-with-a-list__word Абаринов
+                                        a(href="#").letter-with-a-list__word Абасов
+                                        a(href="#").letter-with-a-list__word Абаткин
+                                        a(href="#").letter-with-a-list__word Абатуров
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Абациев
+                                        a(href="#").letter-with-a-list__word Абашелин
+                                        a(href="#").letter-with-a-list__word Абашидзе
+                                        a(href="#").letter-with-a-list__word Абалешев
+                                        a(href="#").letter-with-a-list__word Абалий
+                                        a(href="#").letter-with-a-list__word Абалин
+                                        a(href="#").letter-with-a-list__word Абалиш
+                            .letter-with-a-list
+                                p.letter-with-a-list__letter Б
+                                .letter-with-a-list__list
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Бендычко
+                                        a(href="#").letter-with-a-list__word Беневелевский
+                                        a(href="#").letter-with-a-list__word Беневитинов
+                                        a(href="#").letter-with-a-list__word Беневоленский
+                                        a(href="#").letter-with-a-list__word Беневольский
+                                        a(href="#").letter-with-a-list__word Беневский
+                                        a(href="#").letter-with-a-list__word Бенедецкий
+                                        a(href="#").letter-with-a-list__word Бенедзкий
+                                        a(href="#").letter-with-a-list__word Бенедиковский
+                                        a(href="#").letter-with-a-list__word Бенедиктов
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Бенедиктович
+                                        a(href="#").letter-with-a-list__word Бенедиктовский
+                                        a(href="#").letter-with-a-list__word Бенедиктор
+                                        a(href="#").letter-with-a-list__word Бенедский
+                                        a(href="#").letter-with-a-list__word Бенедыктович
+                                        a(href="#").letter-with-a-list__word Бенезе
+                                        a(href="#").letter-with-a-list__word Бенек
+                                        a(href="#").letter-with-a-list__word Бенек-фон-Дуве
+                                        a(href="#").letter-with-a-list__word Бенеке-фон-Дуве
+                                        a(href="#").letter-with-a-list__word Бенензон
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Бененсон
+                                        a(href="#").letter-with-a-list__word Бенераф
+                                        a(href="#").letter-with-a-list__word Бенеркин
+                                        a(href="#").letter-with-a-list__word Бенерман
+                                        a(href="#").letter-with-a-list__word Бенескриптов
+                                        a(href="#").letter-with-a-list__word Бенескул
+                                        a(href="#").letter-with-a-list__word Бендычко
+                                        a(href="#").letter-with-a-list__word Беневелевский
+                                        a(href="#").letter-with-a-list__word Беневитинов
+                                        a(href="#").letter-with-a-list__word Беневоленский
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Бендычко
+                                        a(href="#").letter-with-a-list__word Беневелевский
+                                        a(href="#").letter-with-a-list__word Беневитинов
+                                        a(href="#").letter-with-a-list__word Беневоленский
+                                        a(href="#").letter-with-a-list__word Беневольский
+                                        a(href="#").letter-with-a-list__word Беневский
+                                        a(href="#").letter-with-a-list__word Бенедецкий
+                                        a(href="#").letter-with-a-list__word Бенедзкий
+                                        a(href="#").letter-with-a-list__word Бенедиковский
+                                        a(href="#").letter-with-a-list__word Бенедиктов
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Бенедиктович
+                                        a(href="#").letter-with-a-list__word Бенедиктовский
+                                        a(href="#").letter-with-a-list__word Бенедиктор
+                                        a(href="#").letter-with-a-list__word Бенедский
+                                        a(href="#").letter-with-a-list__word Бенедыктович
+                                        a(href="#").letter-with-a-list__word Бенезе
+                                        a(href="#").letter-with-a-list__word Бенек
+                                        a(href="#").letter-with-a-list__word Бенек-фон-Дуве
+                                        a(href="#").letter-with-a-list__word Бенеке-фон-Дуве
+                                        a(href="#").letter-with-a-list__word Бенензон
+                                    .letter-with-a-list__list__column
+                                        a(href="#").letter-with-a-list__word Бененсон
+                                        a(href="#").letter-with-a-list__word Бенераф
+                                        a(href="#").letter-with-a-list__word Бенеркин
+                                        a(href="#").letter-with-a-list__word Бенерман
+                                                            
+        include ../includes/footer.pug

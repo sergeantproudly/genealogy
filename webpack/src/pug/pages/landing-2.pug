@@ -1,0 +1,418 @@
+extends ../includes/template.pug
+
+block title
+    | Genealogy - Landing
+
+
+block content
+    .stick
+        .stick__top
+            include ../includes/header.pug
+            +header({current: "serv", profile: 1}) 
+            section.initial-screen-landing
+                .container
+                    .row
+                        .col-lg-7.initial-screen-landing_order-mobile-and-tablet-2
+                            h1.initial-screen-landing__headline Закажите проведение<br class="br_lg"> генеалогического исследования    
+                            p.initial-screen-landing__description Наш портал специализируется на предоставлении<br class="br_lg"> услуг в сфере генеалогии, выберите нужную и <br class="br_lg">заказжите — это просто!
+                            a(
+                                href="#"
+                            ).default-button.default-button_short Заказать
+                        .col-lg-5.initial-screen-landing_order-mobile-and-tablet-1
+                            .initial-screen-landing__illustration
+                                img(
+                                    src="assets/img/landing-page-2.svg"
+                                ).initial-screen-landing__illustration__picture
+            section.landing-page-why
+                img(
+                    src="assets/img/landing-page-why-desktop.svg"
+                ).landing-page-why__background
+
+                img(
+                    src="assets/img/landing-page-why-tablet-top.svg"
+                ).landing-page-why__tablet-background.landing-page-why__tablet-background_top
+                img(
+                    src="assets/img/landing-page-why-tablet-bottom.svg"
+                ).landing-page-why__tablet-background.landing-page-why__tablet-background_bottom
+                
+                img(
+                    src="assets/img/landing-page-why-mobile-top.svg"
+                ).landing-page-why__mobile-background.landing-page-why__mobile-background_top
+                img(
+                    src="assets/img/landing-page-why-mobile-bottom.svg"
+                ).landing-page-why__mobile-background.landing-page-why__mobile-background_bottom
+                
+                .container
+                    .row
+                        .col-lg-10
+                            h2.landing-page-why__headline Для чего нужно генеалогическое<br class="br_lg"> исследования?
+                            .landing-page-why__reason
+                                .landing-page-why__reason__left
+                                    img(
+                                        src="assets/img/number-1.svg"
+                                    ).landing-page-why__reason__number
+                                .landing-page-why__reason__right
+                                    p.landing-page-why__reason__headline Объединение семьи
+                                    p.landing-page-why__reason__description Составление генеалогического древа — это не просто систематизация информации и составление красивой таблицы с именами и фамилиями, а общение с разными людьми, которое является неотъемлемой частью этого проекта.
+                            .landing-page-why__reason
+                                .landing-page-why__reason__left
+                                    img(
+                                        src="assets/img/number-2.svg"
+                                    ).landing-page-why__reason__number
+                                .landing-page-why__reason__right
+                                    p.landing-page-why__reason__headline Решение вопроса национальности
+                                    p.landing-page-why__reason__description Составление генеалогического древа — это не просто систематизация информации и составление красивой таблицы с именами и фамилиями, а общение с разными людьми, которое является неотъемлемой частью этого проекта.
+                            .landing-page-why__reason
+                                .landing-page-why__reason__left
+                                    img(
+                                        src="assets/img/number-3.svg"
+                                    ).landing-page-why__reason__number
+                                .landing-page-why__reason__right
+                                    p.landing-page-why__reason__headline Решение вопроса национальности
+                                    p.landing-page-why__reason__description Составление генеалогического древа — это не просто систематизация информации и составление красивой таблицы с именами и фамилиями, а общение с разными людьми, которое является неотъемлемой частью этого проекта.
+
+            section.landing-stages
+                .container
+                    .row
+                        .col-lg-12
+                            h2.landing-stages__headline Этапы генеалогического исследования
+                        .col-lg-4.landing-stages__stage-indent
+                            .landing-stages__stage.landing-stages__stage_1
+                                p.landing-stages__stage__name I этап
+                                p.landing-stages__stage__description Специалист тщательно исследует информацию у ближних и дальних родственников, а также исторические архивы, включая ведомственные и краеведческие, музеи, библиотеки, базы данных Министерства обороны и многое другое.
+                        .col-lg-4.landing-stages__stage-indent
+                            .landing-stages__stage.landing-stages__stage_2
+                                p.landing-stages__stage__name II этап
+                                p.landing-stages__stage__description Информация анализируется, систематизируется и выстраивается в подробный отчет об генеалогической экспертизе. Уже на этом этапе, возможно, вы найдете родственников о существовании которых вы даже не подозревали.
+                        .col-lg-4.landing-stages__stage-indent
+                            .landing-stages__stage.landing-stages__stage_3
+                                p.landing-stages__stage__name III этап
+                                p.landing-stages__stage__description Полученные данные оформляются в одном из нескольких способов на выбор. Это может быть непосредственно генеалогическое древо, генеалогическая таблица или поколенная роспись
+            
+            section.landing-fag
+                .container
+                    .row
+                        .col-lg-12
+                            h2.landing-fag__headline Вопросы и ответы
+                            .landing-fag__questions
+                                .landing-fag__question
+                                    .landing-fag__question__top
+                                        p.landing-fag__question__headline Что если вы не найдете нужных мне родственников?
+                                        .landing-fag__question__open
+                                    p.landing-fag__question__answer Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников?Что если вы не найдете нужных мне родственников?
+                                .landing-fag__question
+                                    .landing-fag__question__top
+                                        p.landing-fag__question__headline Как глубоко может происходить исследование моего древа?
+                                        .landing-fag__question__open
+                                    p.landing-fag__question__answer Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников?  
+                                .landing-fag__question
+                                    .landing-fag__question__top
+                                        p.landing-fag__question__headline Нужно ли мне принимать непосредственное участие в процессе?
+                                        .landing-fag__question__open
+                                    p.landing-fag__question__answer Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников?  
+                                .landing-fag__question
+                                    .landing-fag__question__top
+                                        p.landing-fag__question__headline Как способы и формы оплаты вы принимаете?
+                                        .landing-fag__question__open
+                                    p.landing-fag__question__answer Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников? Что если вы не найдете нужных мне родственников?  
+            
+            section.landing-order
+                .container
+                    .row
+                        .col-lg-12
+                            h2.landing-order__headline Заказать <br>генеалогическое исследование 
+                            p.landing-order__description Для заказа, заполните все необходимые поля, исполнитель <br class="br_md"> свяжется с вами в личном 
+                            .landing-order__form
+                                .landing-order__form__top
+                                    .landing-order__column
+                                        label.default-field-with-label
+                                            // default-field-with-label_error
+                                            span.default-field-with-label__label ФИО
+                                            input(
+                                                type="text"
+                                                placeholder="Ввести"
+                                                value="Светлов Виктор Петровчи"
+                                            ).default-field-with-label__field
+                                            span.default-field-with-label__error Такой фамилии не существует
+                                    .landing-order__column
+                                        label.default-field-with-label
+                                            // default-field-with-label_error
+                                            span.default-field-with-label__label Мобильный телефон
+                                            input(
+                                                type="text"
+                                                placeholder="Ввести"
+                                                value="8966384753"
+                                            ).default-field-with-label__field
+                                            span.default-field-with-label__error Такой фамилии не существует
+                                    .landing-order__column
+                                        label.default-select-with-label
+                                            // default-field-with-label_error
+                                            span.default-select-with-label__label Способ получения запроса
+                                            select(
+                                                type="text"
+                                                placeholder="Ввести"
+                                                value=""
+                                            ).default-select-with-label__field
+                                                option(
+                                                    value="1"
+                                                ) Личное обращение
+                                            span.default-select-with-label__error Такой фамилии не существует
+                                    .landing-order__column
+                                        label.default-field-with-label
+                                            // default-field-with-label_error
+                                            span.default-field-with-label__label Ваш адрес
+                                            input(
+                                                type="text"
+                                                placeholder="Ввести"
+                                                value="пр. Ибрагимова, д 3, кв. 39"
+                                            ).default-field-with-label__field
+                                            span.default-field-with-label__error Такой фамилии не существует
+                                    .landing-order__column
+                                        label.default-field-with-label
+                                            // default-field-with-label_error
+                                            span.default-field-with-label__label Email
+                                            input(
+                                                type="email"
+                                                placeholder="Ввести"
+                                                value=""
+                                            ).default-field-with-label__field
+                                            span.default-field-with-label__error Такой фамилии не существует
+                                    .landing-order__column
+                                        label.default-select-with-label
+                                            // default-field-with-label_error
+                                            span.default-select-with-label__label Откуда пришел запрос
+                                            select(
+                                                type="text"
+                                                placeholder="Ввести"
+                                                value=""
+                                            ).default-select-with-label__field
+                                                option(
+                                                    value="1"
+                                                ) Из РФ
+                                            span.default-select-with-label__error Такой фамилии не существует
+                                    .landing-order__column
+                                        label.default-field-with-label
+                                            // default-field-with-label_error
+                                            span.default-field-with-label__label Способ получение результата
+                                            input(
+                                                type="text"
+                                                placeholder="Ввести"
+                                                value="Лично в архиве"
+                                            ).default-field-with-label__field
+                                            span.default-field-with-label__error Такой фамилии не существует
+                                    .landing-order__column
+                                        .default-radio
+                                            p.default-radio__label Вид заявителя
+                                            .default-radio__chooses
+                                                label.default-radio__choose
+                                                    input(
+                                                        type="radio"
+                                                        name="1"
+                                                        checked
+                                                    ).default-radio__choose__input
+                                                    span.default-radio__choose__cell
+                                                    span.default-radio__choose__text Физ. лицо
+                                                label.default-radio__choose
+                                                    input(
+                                                        type="radio"
+                                                        name="1"
+                                                    ).default-radio__choose__input
+                                                    span.default-radio__choose__cell
+                                                    span.default-radio__choose__text Юр. лицо   
+                                    .landing-order__column
+                                        label.default-field-with-label
+                                            // default-field-with-label_error
+                                            span.default-field-with-label__label Вид запроса
+                                            input(
+                                                type="text"
+                                                placeholder="Ввести"
+                                                value="Генеалогический"
+                                                disabled
+                                            ).default-field-with-label__field
+                                            span.default-field-with-label__error Такой фамилии не существует
+                                    .landing-order__column
+                                        label.default-field-with-label
+                                            // default-field-with-label_error
+                                            span.default-field-with-label__label Домашний телефон
+                                            input(
+                                                type="text"
+                                                placeholder="Ввести"
+                                                value="253-47-45"
+                                            ).default-field-with-label__field
+                                            span.default-field-with-label__error Такой фамилии не существует
+                                    .landing-order__column
+                                        label.default-select-with-label.default-select-with-label_empty
+                                            // default-field-with-label_error
+                                            span.default-select-with-label__label Социальная категория
+                                            select(
+                                                type="text"
+                                                placeholder="Ввести"
+                                                value=""
+                                            ).default-select-with-label__field
+                                                option(
+                                                    value="1"
+                                                ) Выбрать
+                                            span.default-select-with-label__error Такой фамилии не существует
+                                    .landing-order__column
+                                        label.default-select-with-label
+                                            // default-field-with-label_error
+                                            span.default-select-with-label__label Цель запроса
+                                            select(
+                                                type="text"
+                                                placeholder="Ввести"
+                                                value=""
+                                            ).default-select-with-label__field
+                                                option(
+                                                    value="1"
+                                                ) Генеалогия
+                                            span.default-select-with-label__error Такой фамилии не существует
+                                label.default-textarea-with-label
+                                    // default-textarea-with-label_error
+                                    span.default-textarea-with-label__label Содержание запроса
+                                    textarea(
+                                        type="text"
+                                        placeholder="Ввести"
+                                    ).default-textarea-with-label__field рожд. Алексеева Екатерина Павловна 1921, с. Шапши, Высокогорий р-н
+                                    span.default-textarea-with-label__error Такой фамилии не существует
+                                label.default-textarea-with-label
+                                    // default-textarea-with-label_error
+                                    span.default-textarea-with-label__label Комментарий
+                                    textarea(
+                                        type="text"
+                                        placeholder="Ввести"
+                                    ).default-textarea-with-label__field 
+                                    span.default-textarea-with-label__error Такой фамилии не существует
+                                .landing-order__dop-fields
+                                    p.landing-order__dop-fields__headline Дополнительно
+                                    .landing-order__dop-fields__shell
+
+                                        .landing-order__column
+                                            label.default-field-with-label
+                                                // default-field-with-label_error
+                                                span.default-field-with-label__label ФИО Интересующегося лица
+                                                input(
+                                                    type="text"
+                                                    placeholder="Ввести"
+                                                    value="Светлов Виктор Петровчи"
+                                                ).default-field-with-label__field
+                                                span.default-field-with-label__error Населенный пункт
+                                        .landing-order__column
+                                            label.default-field-with-label
+                                                // default-field-with-label_error
+                                                span.default-field-with-label__label Населенный пункт
+                                                input(
+                                                    type="text"
+                                                    placeholder="Ввести"
+                                                    value="Шапши"
+                                                ).default-field-with-label__field
+                                                span.default-field-with-label__error Такой фамилии не существует
+                                        .landing-order__column
+                                            label.default-field-with-label
+                                                // default-field-with-label_error
+                                                span.default-field-with-label__label Сведения о родителях (ФИО, год и место рожд.)
+                                                input(
+                                                    type="text"
+                                                    placeholder="Ввести"
+                                                    value=""
+                                                ).default-field-with-label__field
+                                                span.default-field-with-label__error Такой фамилии не существует
+                                        .landing-order__column
+                                            label.default-field-with-label
+                                                // default-field-with-label_error
+                                                span.default-field-with-label__label Предыдущие фамилия, имя и отчество
+                                                input(
+                                                    type="text"
+                                                    placeholder="Ввести"
+                                                    value=""
+                                                ).default-field-with-label__field
+                                                span.default-field-with-label__error Такой фамилии не существует
+                                        .landing-order__column
+                                            label.default-field-with-label
+                                                // default-field-with-label_error
+                                                span.default-field-with-label__label Год и место смерти
+                                                input(
+                                                    type="text"
+                                                    placeholder="Ввести"
+                                                    value=""
+                                                ).default-field-with-label__field
+                                                span.default-field-with-label__error Такой фамилии не существует
+                                        .landing-order__column
+                                            label.default-field-with-label
+                                                // default-field-with-label_error
+                                                span.default-field-with-label__label Год и место бракосочетания
+                                                input(
+                                                    type="text"
+                                                    placeholder="Ввести"
+                                                    value=""
+                                                ).default-field-with-label__field
+                                                span.default-field-with-label__error Такой фамилии не существует
+                                        .landing-order__column
+                                            label.default-field-with-label
+                                                // default-field-with-label_error
+                                                span.default-field-with-label__label Дата рождения: регион
+                                                input(
+                                                    type="text"
+                                                    placeholder="Ввести"
+                                                    value=""
+                                                ).default-field-with-label__field
+                                                span.default-field-with-label__error Такой фамилии не существует
+                                        .landing-order__column
+                                            label.default-field-with-label
+                                                // default-field-with-label_error
+                                                span.default-field-with-label__label Сословие, род занятий
+                                                input(
+                                                    type="text"
+                                                    placeholder="Ввести"
+                                                    value=""
+                                                ).default-field-with-label__field
+                                                span.default-field-with-label__error Такой фамилии не существует
+                                        .landing-order__column
+                                            label.default-field-with-label
+                                                // default-field-with-label_error
+                                                span.default-field-with-label__label Цель поиска
+                                                input(
+                                                    type="text"
+                                                    placeholder="Ввести"
+                                                    value=""
+                                                ).default-field-with-label__field
+                                                span.default-field-with-label__error Такой фамилии не существует
+                                    .landing-order__dop-fields__agrees
+                                        label.landing-order__agree.landing-order__agree_big
+                                            input(
+                                                type="checkbox"
+                                                checked
+                                            ).landing-order__agree__input
+                                            span.landing-order__agree__text Тематическое генеалогическое исследование (ТГИ) — изучение родословной по прямой нисходящей линии
+                                        label.landing-order__agree.landing-order__agree_big
+                                            input(
+                                                type="checkbox"
+                                            ).landing-order__agree__input
+                                            span.landing-order__agree__text Акт гражданского состояния (АГС) — справка об одном факте
+                                    label.default-textarea-with-label
+                                        // default-textarea-with-label_error
+                                        span.default-textarea-with-label__label Дополнительные свеления (ФИО супруга/супруги, известные дети, годы их рождения)
+                                        textarea(
+                                            type="text"
+                                            placeholder="Ввести"
+                                        ).default-textarea-with-label__field 
+                                        span.default-textarea-with-label__error Такой фамилии не существует
+                                .landing-order__form__bottom
+                                    .landing-order__form__bottom__left
+                                        button(
+                                            onclick="onToggleDopFields()"
+                                        ).landing-order__form__dop
+                                            span.landing-order__form__dop__text.landing-order__form__dop__text_hidden Дополнительно
+                                            span.landing-order__form__dop__text.landing-order__form__dop__text_open Скрыть дополнительные поля
+                                            img(
+                                                src="assets/img/arrow-dop.svg"
+                                            ).landing-order__form__dop__arrow
+                                    .landing-order__form__bottom__center
+                                        label.landing-order__agree
+                                            input(
+                                                type="checkbox"
+                                                checked
+                                            ).landing-order__agree__input
+                                            span.landing-order__agree__text Я согласен с условиями обработки личных данных
+                                    .landing-order__form__bottom__right
+                                        button.default-button Отправить заказ
+        include ../includes/footer.pug

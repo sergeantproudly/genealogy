@@ -5,67 +5,68 @@ block title
 
 
 block content
-    .stick__top
-        include ../includes/header.pug
-        +header()
-        section.chat-page
-            .container
-                .row
-                    .col-lg-12
-                        .tabs-with-headline
-                            h2.tabs-with-headline__headline Заказ 19486
-                            .tabs-with-headline__tabs
-                                a(
-                                    href="order"
-                                ).tabs-with-headline__tab
-                                    span.tabs-with-headline__tab__text Информация
-                                a(
-                                    href="chat"
-                                ).tabs-with-headline__tab.tabs-with-headline__tab_active
-                                    span.tabs-with-headline__tab__text 
-                                        | Сообщения
-                                        span.tabs-with-headline__tab__text__count 0
-                        h1.chat-page__headline Чат с исполнителем
-                        .chat-page__messages
-                            .chat-page__messages__top
-                                .chat-page__messages__scroll
-                                    p.chat-page__messages__date 24 октября
-                                    .chat-page__message
-                                        .chat-page__message__avatar
-                                            img(
-                                                src="assets/img/avatar-empty.svg"
-                                            ).chat-page__message__avatar__picture
-                                        .chat-page__message__body
-                                            p.chat-page__message__body__name Кирилл Е.П.
-                                            p.chat-page__message__body__text Здравствуйте! У меня возникло несколько вопросов относительно данных, которые вы прислали, хотелось бы обсудих их. Как вам удобнее, здесь или по телефону?
-                                            p.chat-page__message__body__date 24 окт, 21:37
-                                    p.chat-page__messages__date Сегодня
-                                    .chat-page__message.chat-page__message_right
-                                        .chat-page__message__body
-                                            p.chat-page__message__body__text Здравствуйте, Кирилл! Мне было бы удобнее ответить на вопросы здесь, так как у меня не много времени днем
-                                            p.chat-page__message__body__date 09:12
-                                        .chat-page__message__avatar
-                                            img(
-                                                src="assets/tmp/avatar.jpg"
-                                            ).chat-page__message__avatar__picture
-                                    .chat-page__message
-                                        .chat-page__message__avatar
-                                            img(
-                                                src="assets/img/avatar-empty.svg"
-                                            ).chat-page__message__avatar__picture
-                                        .chat-page__message__body
-                                            p.chat-page__message__body__name Кирилл Е.П.
-                                            p.chat-page__message__body__text Хорошо, в таком случае я напишу свои вопросы в течение дня
-                                            p.chat-page__message__body__date 10:02
-                            .chat-page__messages__bottom
-                                input(
-                                    type="text"
-                                    placeholder="Написать сообщение"
-                                ).chat-page__messages__field
-                                button.chat-page__messages__submit 
-                                    .chat-page__messages__submit__text Отправить
-                                    img(
-                                        src="assets/img/send-blue.svg"
-                                    ).chat-page__messages__submit__icon
-                                
-    include ../includes/footer.pug
+    .stick
+        .stick__top
+            include ../includes/header.pug
+            +header({current: "", profile: 1})
+            section.chat-page
+                .container
+                    .row
+                        .col-lg-12
+                            .tabs-with-headline
+                                h2.tabs-with-headline__headline Заказ 19486
+                                .tabs-with-headline__tabs
+                                    a(
+                                        href="order"
+                                    ).tabs-with-headline__tab
+                                        span.tabs-with-headline__tab__text Информация
+                                    a(
+                                        href="chat"
+                                    ).tabs-with-headline__tab.tabs-with-headline__tab_active
+                                        span.tabs-with-headline__tab__text 
+                                            | Сообщения
+                                            span.tabs-with-headline__tab__text__count 0
+                            h1.chat-page__headline Чат с исполнителем
+                            .chat-page__messages
+                                .chat-page__messages__top
+                                    .chat-page__messages__scroll
+                                        p.chat-page__messages__date 24 октября
+                                        .chat-page__message
+                                            .chat-page__message__avatar
+                                                img(
+                                                    src="assets/img/avatar-empty.svg"
+                                                ).chat-page__message__avatar__picture
+                                            .chat-page__message__body
+                                                p.chat-page__message__body__name Кирилл Е.П.
+                                                p.chat-page__message__body__text Здравствуйте! У меня возникло несколько вопросов относительно данных, которые вы прислали, хотелось бы обсудих их. Как вам удобнее, здесь или по телефону?
+                                                p.chat-page__message__body__date 24 окт, 21:37
+                                        p.chat-page__messages__date Сегодня
+                                        .chat-page__message.chat-page__message_right
+                                            .chat-page__message__body
+                                                p.chat-page__message__body__text Здравствуйте, Кирилл! Мне было бы удобнее ответить на вопросы здесь, так как у меня не много времени днем
+                                                p.chat-page__message__body__date 09:12
+                                            .chat-page__message__avatar
+                                                img(
+                                                    src="assets/tmp/avatar.jpg"
+                                                ).chat-page__message__avatar__picture
+                                        .chat-page__message
+                                            .chat-page__message__avatar
+                                                img(
+                                                    src="assets/img/avatar-empty.svg"
+                                                ).chat-page__message__avatar__picture
+                                            .chat-page__message__body
+                                                p.chat-page__message__body__name Кирилл Е.П.
+                                                p.chat-page__message__body__text Хорошо, в таком случае я напишу свои вопросы в течение дня
+                                                p.chat-page__message__body__date 10:02
+                                .chat-page__messages__bottom
+                                    input(
+                                        type="text"
+                                        placeholder="Написать сообщение"
+                                    ).chat-page__messages__field
+                                    button.chat-page__messages__submit 
+                                        .chat-page__messages__submit__text Отправить
+                                        img(
+                                            src="assets/img/send-blue.svg"
+                                        ).chat-page__messages__submit__icon
+                                    
+        include ../includes/footer.pug

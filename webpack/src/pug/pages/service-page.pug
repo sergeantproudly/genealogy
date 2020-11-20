@@ -5,58 +5,59 @@ block title
 
 
 block content
-    .stick__top
-        include ../includes/header.pug
-        +header()
-        section.service-page
-            .container
-                .row
-                    .col-lg-12
-                        h1.service-page__headline Услуги
-                        .service-page__links
-                            a(
-                                href="#"
-                            ).service-page__link
-                                span.service-page__link__illustration.service-page__link__illustration_1
-                                    img(
-                                        src="assets/img/illustration-service-1.svg"
-                                    ).service-page__link__illustration__picture
-                                span.service-page__link__info
-                                    span.service-page__link__name Построение <br class="br_md"> генеалогического древа
-                                    span.service-page__link__description Наш портал специализируется на предоставлении услуг в сфере генеалогии, выберите нужную и заказжите — это просто! 
-                                span.service-page__link__arrow
-                                    <svg class="service-page__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
-                                        <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
-                                    </svg>
-                            a(
-                                href="#"
-                            ).service-page__link
-                                span.service-page__link__illustration.service-page__link__illustration_2
-                                    img(
-                                        src="assets/img/illustration-service-2.svg"
-                                    ).service-page__link__illustration__picture
-                                span.service-page__link__info
-                                    span.service-page__link__name Проведение генеалогического исследования
-                                    span.service-page__link__description Наш портал специализируется на предоставлении услуг в сфере генеалогии, выберите нужную и заказжите — это просто! 
-                                span.service-page__link__arrow
-                                    <svg class="service-page__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
-                                        <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
-                                    </svg>
-                            a(
-                                href="#"
-                            ).service-page__link
-                                span.service-page__link__illustration.service-page__link__illustration_3
-                                    img(
-                                        src="assets/img/illustration-service-3.svg"
-                                    ).service-page__link__illustration__picture
-                                span.service-page__link__info
-                                    span.service-page__link__name Выдача архивной справки
-                                    span.service-page__link__description Наш портал специализируется на предоставлении услуг в сфере генеалогии, выберите нужную и заказжите — это просто! 
-                                span.service-page__link__arrow
-                                    <svg class="service-page__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
-                                        <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
-                                    </svg>  
-    include ../includes/footer.pug
+    .stick
+        .stick__top
+            include ../includes/header.pug
+            +header({current: "serv"}) 
+            section.service-page
+                .container
+                    .row
+                        .col-lg-12
+                            h1.service-page__headline Услуги
+                            .service-page__links
+                                a(
+                                    href="#"
+                                ).service-page__link
+                                    span.service-page__link__illustration.service-page__link__illustration_1
+                                        img(
+                                            src="assets/img/illustration-service-1.svg"
+                                        ).service-page__link__illustration__picture
+                                    span.service-page__link__info
+                                        span.service-page__link__name Построение <br class="br_md"> генеалогического древа
+                                        span.service-page__link__description Наш портал специализируется на предоставлении услуг в сфере генеалогии, выберите нужную и заказжите — это просто! 
+                                    span.service-page__link__arrow
+                                        <svg class="service-page__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                            <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                        </svg>
+                                a(
+                                    href="#"
+                                ).service-page__link
+                                    span.service-page__link__illustration.service-page__link__illustration_2
+                                        img(
+                                            src="assets/img/illustration-service-2.svg"
+                                        ).service-page__link__illustration__picture
+                                    span.service-page__link__info
+                                        span.service-page__link__name Проведение генеалогического исследования
+                                        span.service-page__link__description Наш портал специализируется на предоставлении услуг в сфере генеалогии, выберите нужную и заказжите — это просто! 
+                                    span.service-page__link__arrow
+                                        <svg class="service-page__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                            <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                        </svg>
+                                a(
+                                    href="#"
+                                ).service-page__link
+                                    span.service-page__link__illustration.service-page__link__illustration_3
+                                        img(
+                                            src="assets/img/illustration-service-3.svg"
+                                        ).service-page__link__illustration__picture
+                                    span.service-page__link__info
+                                        span.service-page__link__name Выдача архивной справки
+                                        span.service-page__link__description Наш портал специализируется на предоставлении услуг в сфере генеалогии, выберите нужную и заказжите — это просто! 
+                                    span.service-page__link__arrow
+                                        <svg class="service-page__link__arrow__picture" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.82346 4.35095H0.700622C0.464389 4.35095 0.273438 4.15957 0.273438 3.92377C0.273438 3.68796 0.464389 3.49658 0.700622 3.49658H6.82346C7.05969 3.49658 7.25064 3.68796 7.25064 3.92377C7.25064 4.15957 7.05969 4.35095 6.82346 4.35095Z" fill="white"/>
+                                            <path d="M4.74331 7.12004C4.64848 7.12004 4.55322 7.08843 4.47376 7.02393C4.2905 6.87484 4.26359 6.60571 4.41267 6.42288L6.45718 3.91659L4.64335 1.56835C4.49896 1.38167 4.53314 1.1134 4.72024 0.969014C4.90735 0.824198 5.17562 0.860082 5.31916 1.04591L7.34017 3.66241C7.46149 3.81962 7.4585 4.03962 7.33291 4.19383L5.07395 6.96284C4.99023 7.06622 4.8672 7.12004 4.74331 7.12004Z" fill="white"/>
+                                        </svg>  
+        include ../includes/footer.pug

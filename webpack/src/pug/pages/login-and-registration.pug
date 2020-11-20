@@ -5,120 +5,125 @@ block title
 
 
 block content
-    .stick__top
-        include ../includes/header.pug
-        +header()
-        section.login-and-registration
-            .container
-                .row
-                    .col-lg-12
-                        h1.login-and-registration__headline Личный кабинет
-                        .login-and-registration__form.login-and-registration__form_registration
-                            // login-and-registration__form_login
-                            // login-and-registration__form_registration
-                            .login-and-registration__form__top
-                                button(
-                                    onclick="turnLoginRegistration('login')"
-                                ).login-and-registration__form__top__half
-                                    .login-and-registration__form__top__half__top-layer Авторизация
-                                button(
-                                    onclick="turnLoginRegistration('registration')"
-                                ).login-and-registration__form__top__half
-                                    .login-and-registration__form__top__half__top-layer Регистрация
-                            form(
-                                action="my-data"
-                            ).login-and-registration__form__bottom.login-and-registration__form__bottom_login
-                                label.field-with-icon.field-with-icon_user
-                                    .field-with-icon__shell
-                                        span.field-with-icon__icon
-                                        input(
-                                            type="email"
-                                            placeholder="Ваш email"
-                                        ).field-with-icon__field
-                                label.field-with-icon.field-with-icon_password
-                                    // field-with-icon_error
-                                    .field-with-icon__shell
-                                        span.field-with-icon__icon
-                                        input(
-                                            type="password"
-                                            placeholder="Пароль"
-                                        ).field-with-icon__field
-                                    // span.field-with-icon__error Логин или пароль неверный
-                                a(
-                                    href="#"
-                                ).login-and-registration__form__forgot-password Забыли пароль?
-                                button(
-                                ).default-button.login-and-registration__form__login
-                                    // disabled
-                                    // default-button_loader
-                                    span.default-button__text Войти
-                                a(
-                                    href="#"
-                                ).login-and-registration__form__log-in-via-service Войти через ЕАИС РТ 
-                            form(
-                                action=""
-                            ).login-and-registration__form__bottom.login-and-registration__form__bottom_registration
-                                label.default-field
-                                    // default-field_error
-                                    input(
-                                        type="text"
-                                        placeholder="Фамилия"
-                                    ).default-field__field
-                                    span.default-field__error Такой фамилии не существует
-                                label.default-field
-                                    // default-field_error
-                                    input(
-                                        type="text"
-                                        placeholder="Имя"
-                                    ).default-field__field
-                                    span.default-field__error Такой фамилии не существует
-                                label.default-field
-                                    // default-field_error
-                                    input(
-                                        type="text"
-                                        placeholder="Отчество"
-                                    ).default-field__field
-                                    span.default-field__error Такой фамилии не существует
-                                label.default-field
-                                    // default-field_error
-                                    input(
-                                        type="email"
-                                        placeholder="E-mail"
-                                    ).default-field__field
-                                    span.default-field__error Некорректная почта
-                                label.default-field
-                                    // default-field_error
-                                    .default-field__shell
-                                        input(
-                                            type="password"
-                                            placeholder="Пароль"
-                                        ).default-field__field
-                                        button(
-                                            type="button"
-                                        ).default-field__eye
-                                    span.default-field__error Такой фамилии не существует
-                                label.default-field
-                                    // default-field_error
-                                    .default-field__shell
+    .stick.stick_blue
+        .stick__top
+            include ../includes/header.pug
+            +header()
+            section.login-and-registration
+                .container
+                    .row
+                        .col-lg-12
+                            h1.login-and-registration__headline Личный кабинет
+                            .login-and-registration__form.login-and-registration__form_registration
+                                // login-and-registration__form_login
+                                // login-and-registration__form_registration
+                                .login-and-registration__form__top
+                                    button(
+                                        onclick="turnLoginRegistration('login')"
+                                    ).login-and-registration__form__top__half
+                                        .login-and-registration__form__top__half__top-layer Авторизация
+                                    button(
+                                        onclick="turnLoginRegistration('registration')"
+                                    ).login-and-registration__form__top__half
+                                        .login-and-registration__form__top__half__top-layer Регистрация
+                                form(
+                                    action="my-data"
+                                ).login-and-registration__form__bottom.login-and-registration__form__bottom_login
+                                    label.field-with-icon.field-with-icon_user
+                                        .field-with-icon__shell
+                                            span.field-with-icon__icon
+                                            input(
+                                                type="email"
+                                                placeholder="Ваш email"
+                                                name="mail"
+                                            ).field-with-icon__field
+                                    label.field-with-icon.field-with-icon_password
+                                        // field-with-icon_error
+                                        .field-with-icon__shell
+                                            span.field-with-icon__icon
+                                            input(
+                                                type="password"
+                                                name="password"
+                                                placeholder="Пароль"
+                                            ).field-with-icon__field
+                                        span.field-with-icon__error Логин или пароль неверный
+                                    a(
+                                        href="#"
+                                    ).login-and-registration__form__forgot-password Забыли пароль?
+                                    button(
+                                        disabled
+                                    ).default-button.login-and-registration__form__login
+                                        // disabled
+                                        // default-button_loader
+                                        span.default-button__text Войти
+                                    a(
+                                        href="#"
+                                    ).login-and-registration__form__log-in-via-service Войти через ЕАИС РТ 
+                                form(
+                                    action=""
+                                ).login-and-registration__form__bottom.login-and-registration__form__bottom_registration
+                                    label.default-field
+                                        // default-field_error
                                         input(
                                             type="text"
-                                            placeholder="Пароль еще раз"
+                                            name="lastname"
+                                            placeholder="Фамилия"
                                         ).default-field__field
-                                        button(
-                                            type="button"
-                                        ).default-field__eye.default-field__eye_active
-                                    span.default-field__error Такой фамилии не существует
-                                label.login-and-registration__form__agree
-                                    input(
-                                        type="checkbox"
-                                        checked
-                                    ).login-and-registration__form__agree__input
-                                    span.login-and-registration__form__agree__text Я согласен с условиями обработки личных данных
-                                button(
-                                    disabled
-                                ).default-button.default-button_loader.login-and-registration__form__register
-                                    // disabled
-                                    // default-button_loader
-                                    span.default-button__text Регистрация
-                                
-    include ../includes/footer.pug
+                                        span.default-field__error Такой фамилии не существует
+                                    label.default-field
+                                        // default-field_error
+                                        input(
+                                            type="text"
+                                            placeholder="Имя"
+                                        ).default-field__field
+                                        span.default-field__error Такой фамилии не существует
+                                    label.default-field
+                                        // default-field_error
+                                        input(
+                                            type="text"
+                                            placeholder="Отчество"
+                                        ).default-field__field
+                                        span.default-field__error Такой фамилии не существует
+                                    label.default-field
+                                        // default-field_error
+                                        input(
+                                            type="email"
+                                            placeholder="E-mail"
+                                        ).default-field__field
+                                        span.default-field__error Некорректная почта
+                                    label.default-field
+                                        // default-field_error
+                                        .default-field__shell
+                                            input(
+                                                type="password"
+                                                placeholder="Пароль"
+                                            ).default-field__field
+                                            button(
+                                                type="button"
+                                            ).default-field__eye
+                                        span.default-field__error Такой фамилии не существует
+                                    label.default-field
+                                        // default-field_error
+                                        .default-field__shell
+                                            input(
+                                                type="text"
+                                                placeholder="Пароль еще раз"
+                                            ).default-field__field
+                                            button(
+                                                type="button"
+                                            ).default-field__eye.default-field__eye_active
+                                        span.default-field__error Такой фамилии не существует
+                                    label.login-and-registration__form__agree
+                                        input(
+                                            type="checkbox"
+                                            checked
+                                        ).login-and-registration__form__agree__input
+                                        span.login-and-registration__form__agree__text Я согласен с условиями обработки личных данных
+                                    button(
+                                        disabled
+                                    ).default-button.login-and-registration__form__register
+                                        // disabled
+                                        // default-button_loader
+                                        span.default-button__text Регистрация
+                                    
+        include ../includes/footer.pug

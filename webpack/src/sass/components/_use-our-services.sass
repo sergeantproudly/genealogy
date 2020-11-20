@@ -1,0 +1,112 @@
+.use-our-services
+    background: #F0F3F9
+    display: block
+    text-decoration: none
+    position: relative
+    transition: 0.3s
+    &:hover
+        background-color: #E0E6F1
+    &:hover &__arrow
+        background-color: #5E699B
+    &:hover &__arrow__picture 
+        path
+            fill: #fff
+    &__shell
+        border-radius: 3px
+        padding: 34px 48px 47px 42px
+        min-height: 140px
+        transition: 0.3s
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: flex-start
+        flex-wrap: wrap
+        text-decoration: none
+        position: relative
+        background-image: url('../img/use-our-services.svg')
+        background-position: center
+        background-repeat: no-repeat
+        position: relative
+    &::after
+        width: 4px
+        position: absolute
+        height: 100%
+        left: 0
+        top: 0
+        content: ""
+        background: #323B67
+        border-radius: 10px
+    &__info
+        padding: 0 253px 0 0
+        width: calc(100% - 66px)
+    &__name
+        font-weight: 500
+        font-size: 36px
+        line-height: 42px
+        color: #112D3D
+        display: block
+        margin: 0 0 14px 0
+    &__description
+        font-size: 18px
+        line-height: 21px
+        color: #676767
+        display: block
+    &__arrow
+        width: 66px
+        height: 66px
+        border: 2px solid #5E699B
+        border-radius: 50%
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: center
+        transition: 0.3s
+        position: absolute
+        right: 48px
+        top: 50%
+        transform: translateY(-50%)
+        &__picture
+            width: 16px
+            transition: 0.3s
+            path
+                fill: #5E699B
+                transition: 0.3s
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .use-our-services
+        &__shell
+            padding: 44px 42px 44px 42px
+        &__info
+            width: 100%
+            padding: 0
+        &__arrow
+            display: none
+        &__description
+            font-size: 18px
+            line-height: 21px
+            font-weight: 500
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .use-our-services
+        width: calc(100% + 30px)
+        transform: translateX(-15px)
+        &::after
+            display: none
+        &__shell
+            padding: 30px 15px 40px 15px
+        &__info
+            padding: 0 10px 0 0
+            width: calc(100% - 55px) 
+        &__name
+            font-size: 24px
+            line-height: 28px
+        &__description
+            font-size: 14px
+            line-height: 16px
+        &__arrow
+            width: 55px
+            height: 55px
+            position: relative
+            right: 0
+            top: 0
+            transform: translateY(-0%)

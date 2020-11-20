@@ -1,0 +1,251 @@
+.landing-order
+    padding: 29px 0 64px 0
+    &_with-fon
+        padding: 85px 0 64px 0
+        background-image: url('../img/landing-order-fon.svg')
+        background-repeat: no-repeat
+        background-position: center top -107px
+    &__headline
+        margin: 0 0 28px 0
+        font-weight: 500
+        font-size: 50px
+        line-height: 59px
+        color: #112D3D
+    &__description
+        font-size: 18px
+        color: #242C53
+        margin: 0 0 38px 0
+    &__column
+        width: 33%
+        padding: 0 30px
+        margin: 0 0 12px 0
+    &__dop-fields
+        margin: 0
+        overflow: hidden
+        transition: 0.3s
+        &_active
+            margin: 43px 0 27px 0
+        &__headline
+            font-size: 29px
+            line-height: 34px
+            margin: 0 0 27px 0
+            font-weight: 500
+            color: #242C53
+        &__shell
+            display: flex
+            align-items: flex-start
+            align-content: flex-start
+            justify-content: flex-start
+            flex-wrap: wrap
+            width: calc(100% + 60px)
+            transform: translateX(-30px)
+        &__agrees
+            margin: 25px 0 43px 0
+    &__dop-fields &__agree
+        margin: 0 0 17px 0
+    &__form
+        background: #FFFFFF
+        border-radius: 4px
+        box-shadow: 0px 12px 34px #E7EAF1
+        padding: 30px 42px 42px 42px
+        &__top
+            width: calc(100% + 60px)
+            transform: translateX(-30px)
+            display: flex
+            align-items: flex-start
+            align-content: flex-start
+            justify-content: flex-start
+            flex-wrap: wrap
+            margin: 0 0 12px 0
+        .default-textarea-with-label
+            margin: 0 0 12px 0
+        &__bottom
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: flex-start
+            flex-wrap: wrap
+            margin: 21px 0 0 0
+            &__left
+                width: 46%
+            &__center
+                width: 33%
+            &__right
+                width: 20%
+        &__dop
+            border: none
+            background-color: transparent
+            overflow: hidden
+            &_active &__arrow
+                transform: rotate(180deg)
+            &_active &__text_open
+                display: inline-block !important
+            &_active &__text_hidden
+                display: none !important
+            &__text
+                font-size: 18px
+                line-height: 152.49%
+                color: #325294
+                vertical-align: middle
+                position: relative
+                &_open
+                    display: none
+                    &::after
+                        content: "..........................................................................."
+                        position: absolute
+                        right: 0
+                        bottom: -7px
+                &_hidden
+                    display: inline-block
+                    &::after
+                        content: "........................................"
+                        position: absolute
+                        right: 0
+                        bottom: -7px
+                    
+            &__arrow
+                vertical-align: middle
+                margin: 2px 0 0 8px
+                transition: 0.2s
+    &__agree
+        // margin: 5px 0 0 0
+        display: flex
+        position: relative
+        cursor: pointer
+        &__input
+            position: absolute
+            left: 0
+            opacity: 0
+            width: 0
+            height: 0
+        &__input:checked + &__text:before
+            background-image: url('../img/check.svg')
+            background-color: #3B5C9F
+        &_big &__text
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+            color: #000000
+            align-items: flex-start
+            align-content: flex-start
+        &__text
+            font-weight: 300
+            font-size: 12px
+            line-height: 14px
+            color: #6F6F6F
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: flex-start
+            &:before
+                margin: 0 9px 0 0
+                display: inline-block
+                content: ""
+                min-width: 19px
+                height: 19px
+                border-radius: 2px
+                border: 2px solid #3B5C9F
+                vertical-align: top
+                background-position: center
+                background-repeat: no-repeat
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .landing-order
+        padding: 1px 0 44px 0
+        &_with-fon
+            padding: 30px 0 44px 0
+        &__headline
+            margin: 0 0 19px 0
+        &__description
+            margin: 0 0 13px 0
+        &__column
+            width: 50%
+            padding: 0 15px
+            margin: 0 0 27px 0
+        &__dop-fields
+            &_active
+                margin: 43px 0 12px 0
+            &__shell
+                width: calc(100% + 30px)
+                transform: translateX(-15px)
+            &__agrees
+                margin: 9px 0 32px 0
+        &__form
+            padding: 30px 15px 40px 15px
+            margin: 0px 0 0 0
+            &__top
+                width: calc(100% + 30px)
+                transform: translateX(-15px)
+                margin: 0 0 0px 0
+            &__bottom
+                margin: 9px 0 0 0
+                &__left
+                    width: 100%
+                    margin: 0 0 24px 0
+                &__center
+                    width: calc(100% - 200px)
+                &__right
+                    width: 200px
+        &__agree
+            &__text
+                align-items: flex-start
+                align-content: flex-start
+                &:before
+                    margin: 1px 9px 0 0
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .landing-order
+        padding: 3px 0 34px 0
+        &_with-fon
+            padding: 30px 0 0px 0
+            .container
+                padding-bottom: 34px
+                background-color: #F0F3F9
+        &__headline
+            margin: 0 0 21px 0
+            font-size: 26px
+            line-height: 31px
+            text-align: center
+        &__description
+            margin: 0 0 25px 0
+            text-align: center
+            font-size: 16px
+            line-height: 152%
+        &__column
+            width: 100%
+            margin: 0 0 22px 0
+        &__dop-fields
+            &_active
+                margin: 24px 0 27px 0
+            &__headline
+                font-size: 20px
+                line-height: 23px
+                margin: 0 0 15px 0
+            &__agrees
+                margin: 4px 0 31px 0
+        &__form
+            border: none
+            padding: 0
+            margin: 0px 0 0 0
+            box-shadow: none
+            padding: 0
+            background-color: transparent
+            &__dop
+                &__text
+                    font-size: 16px
+            &__top
+                margin: 0 0 0px 0
+            &__bottom
+                margin: 7px 0 0 0
+                &__left,
+                &__center,
+                &__right
+                    width: 100%
+                &__left
+                    margin: 0 0 24px 0
+        &__agree
+            margin: 5px 0 31px 0
+            &_big &__text
+                font-size: 14px
+                line-height: 16px
+            &__text
+                &:before
+                    margin: 1px 9px 0 0

@@ -1,0 +1,101 @@
+.event-page
+    padding: 62px 0 53px 0
+    &__headline
+        margin: 0 0 46px 0
+        font-weight: 500
+        font-size: 50px
+        line-height: 59px
+        color: #112D3D
+    &__preview
+        margin: 0 0 60px 0
+        display: block
+        width: 100%
+    &__about
+        &__headline
+            font-weight: 500
+            font-size: 36px
+            line-height: 42px
+            color: #112D3D
+            margin: 0 0 41px 0
+        &__labels
+            margin: 0 0 49px 0
+        &__label
+            margin: 0 0 17px 0
+            font-weight: 500
+            font-size: 18px
+            line-height: 140%
+            color: #112D3D
+            display: flex
+            align-items: flex-start
+            align-content: flex-start
+            justify-content: flex-start
+            &::before
+                margin: 0 28px 0 0
+                content: ""
+                min-width: 24px
+                height: 24px
+                display: inline-block
+                background-position: center
+                background-repeat: no-repeat
+                vertical-align: middle
+            &_map::before
+                background-image: url("../img/map-icon.svg")
+            &_time::before
+                background-image: url("../img/time-icon.svg")
+            &_date::before
+                background-image: url("../img/date-icon.svg")
+        &__description 
+            margin: 0 0 45px 0
+            font-size: 18px
+            line-height: 140%
+            color: #263238
+    &__shares
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: flex-start
+        flex-wrap: wrap
+    &__share
+        display: inline-block
+        margin: 0 38px 0 0
+        transition: 0.3s
+        &:hover
+            opacity: 0.6
+        &__picture
+            display: block
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .event-page
+        padding: 27px 0 42px 0
+        &__headline
+            margin: 0 0 30px 0
+            padding: 0 30% 0 0
+        &__preview
+            margin: 0 0 33px 0
+                
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .event-page
+        padding: 30px 0 18px 0
+        &__headline
+            margin: 0 0 19px 0
+            font-size: 30px
+            line-height: 35px
+        &__preview
+            margin: 0 0 31px 0
+        &__about
+            &__headline
+                font-size: 25px
+                line-height: 29px
+                margin: 0 0 21px 0
+            &__labels
+                margin: 0 0 29px 0
+            &__label
+                font-size: 16px
+                &::before
+                    margin: 0 11px 0 0
+            &__description 
+                margin: 0 0 31px 0
+                font-size: 14px
+        &__share
+            margin: 0 29px 0 0

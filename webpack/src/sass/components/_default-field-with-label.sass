@@ -14,6 +14,24 @@
         font-size: 12px
         line-height: 14px
         color: #FC5245
+    &__shell
+        position: relative
+    &__eye
+        width: 45px
+        height: 100%
+        border: none        
+        transition: 0.3s
+        position: absolute
+        top: 0
+        right: 0
+        opacity: 0.4
+        background-image: url("../img/eye-close.svg")
+        background-repeat: no-repeat
+        background-position: center left 14px
+        background-color: transparent
+        &_active
+            background-image: url("../img/eye.svg")
+            opacity: 1
     &_error &__error
         display: block
     &_error &__field
@@ -38,3 +56,7 @@
             color: #C5C5C5
         &:focus
             background-color: #fff
+        &:disabled
+            color: rgba(17, 45, 61, 0.5)
+        &:disabled
+            background-color: #F0F3F9

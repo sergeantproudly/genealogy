@@ -1,0 +1,68 @@
+.not-found
+    padding: 50px 0 50px 0
+    &__picture
+        width: 286px
+        display: block
+        margin: 0 auto 28px auto
+        &_1
+            animation: main-monets-animation 4s ease-in-out infinite
+        &_2
+            animation: back-monets-animation 4s ease-in-out infinite
+        &_3
+            animation: float 4s ease-in-out infinite
+    &__title
+        font-weight: 500
+        font-size: 36px
+        line-height: 42px
+        text-align: center
+        color: #112D3D
+        margin: 0 0 16px 0
+    &__tip
+        font-size: 16px
+        line-height: 19px
+        text-align: center
+        color: #112D3D
+        a
+            color: inherit
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .not-found
+        padding: 72px 0 116px 0
+        &__picture
+            margin: 0 auto 21px auto
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .not-found
+        padding: 50px 0 96px 0
+        &__picture
+            width: 185px
+            margin: 0 auto 15px auto
+        &__title
+            font-size: 24px
+            line-height: 28px
+            margin: 0 0 12px 0
+        &__tip
+            font-size: 14px
+            line-height: 21px
+
+@keyframes float 
+	0% 
+		transform: translateY(0%)
+	45% 
+		transform: translateY(-7%)
+	100% 
+		transform: translateY(0%)
+
+@keyframes back-monets-animation 
+	0% 
+		transform: translateY(0%)
+	50% 
+		transform: translateY(-1%)
+	100% 
+		transform: translateY(0%)
+
+@keyframes main-monets-animation 
+	0% 
+		transform: translateY(0%)
+	50% 
+		transform: translateY(-3%)
+	100% 
+		transform: translateY(0%)

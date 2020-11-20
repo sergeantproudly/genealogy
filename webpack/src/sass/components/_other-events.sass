@@ -1,0 +1,152 @@
+.other-events
+    padding: 38px 0 75px 0
+    background-color: #ECEFF5
+    &__head
+        display: flex
+        align-items: flex-start
+        align-content: flex-start
+        justify-content: space-between
+        margin: 0 0 26px 0
+    &__headline
+        font-weight: 500
+        font-size: 50px
+        color: #112D3D
+    &__all-articles
+        display: inline-flex
+        align-items: center
+        align-content: center
+        text-decoration: none
+        margin: 33px 0 0 0
+        &:hover &__arrow
+            background-color: #242C53
+            svg path
+                fill: #fff
+        &__text
+            font-size: 16px
+            text-transform: uppercase
+            color: #112D3D
+            margin: 0 10px 0 0
+            transform: translateY(2px)
+        &__arrow
+            min-width: 22px
+            min-height: 22px
+            border-radius: 50%
+            display: inline-flex
+            align-items: center
+            align-content: center
+            justify-content: center
+            border: 1px solid #112D3D
+            &__picture
+                width: 7px
+                path
+                    fill: #242C53
+    &__events
+        display: flex
+        align-items: stretch
+        align-content: stretch
+        justify-content: flex-start
+        flex-wrap: wrap
+        width: calc(100% + 30px)
+        transform: translateX(-15px)
+    &__event
+        width: 33%
+        display: block
+        text-decoration: none
+        &__indent
+            margin: 0 15px
+            background: #FFFFFF
+            box-shadow: 0px 12px 34px #E7EAF1
+            border-radius: 3px
+            height: 100%
+            position: relative
+            transition: 0.3s
+            display: block
+        &:hover &__indent
+            box-shadow: 0px 18px 34px #E7EAF1
+            transform: scale(1.03)
+            // opacity: 0.8
+        &__picture
+            width: 100%
+            height: 370px
+            object-fit: cover
+            border-radius: 3px
+            display: block
+        &__info
+            padding: 39px 50px 39px 30px
+            display: block
+        &__date
+            line-height: 16px
+            text-transform: uppercase
+            color: #939393
+            margin: 0 0 16px 0
+            display: block
+        &__title
+            font-weight: 500
+            font-size: 20px
+            line-height: 23px
+            color:#000000
+            display: block
+    &__shell-articles
+    &__mobile
+        display: none
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .other-events
+        padding: 42px 0 48px 0
+        &__head
+            margin: 0 0 27px 0
+        &__head &__all-articles
+            display: none
+        &__events
+            flex-wrap: nowrap
+            overflow-x: auto
+            &::-webkit-scrollbar
+                width: 0px
+        &__event
+            min-width: 334px
+            &__picture
+                height: 340px
+            &__date
+                margin: 0 0 13px 0
+            &__title
+                font-size: 18px
+                line-height: 21px
+            &__info
+                padding: 29px 67px 30px 26px
+        &__mobile
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: center
+
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .other-events
+        padding: 29px 0 31px 0
+        &__head
+            margin: 0 0 18px 0
+        &__headline
+            font-size: 30px
+        &__head &__all-articles
+            display: none
+        &__events
+        &__event
+            width: 100%
+            margin: 0 0 15px 0
+            &__picture
+                height: 176px
+            &__date
+                margin: 0 0 10px 0
+            &__title
+                font-size: 16px
+                line-height: 19px
+            &__info
+                padding: 31px 46px 31px 17px
+        &__mobile
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: center
+        &__all-articles
+            margin: 14px 0 0 0
+            &__text
+                font-size: 16px

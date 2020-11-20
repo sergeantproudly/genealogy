@@ -1,0 +1,76 @@
+.landing-stages
+    padding: 39px 0 48px 0
+    &__headline
+        margin: 0 0 49px 0
+        font-weight: 500
+        font-size: 50px
+        line-height: 59px
+        color: #112D3D
+    &__stage-indent
+    &__stage
+        padding: 30px 26px 68px 36px
+        background: #325294
+        border-radius: 4px
+        min-height: 100%
+        background-repeat: no-repeat
+        background-position: left bottom
+        box-shadow: 0px 12px 34px #E7EAF1
+        &_1
+            background-image: url("../img/stage-desktop-1.svg")
+            background-position: right bottom
+        &_2
+            background-image: url("../img/stage-desktop-2.svg")
+        &_3
+            background-image: url("../img/stage-desktop-3.svg")
+        &__name
+            font-weight: 600
+            font-size: 36px
+            line-height: 42px
+            color: #FFFFFF
+            margin: 0 0 27px 0
+        &__description
+            font-size: 16px
+            line-height: 24px
+            color: #FFFFFF
+@media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg)-1})
+    .landing-stages
+        padding: 60px 0 14px 0
+        &__headline
+            margin: 0 0 40px 0
+        &__stage-indent
+            margin: 0 0 20px 0
+        &__stage
+            padding: 30px 57px 52px 35px
+            &_1
+                background-image: url("../img/stage-tablet-1.svg")
+                background-position: center bottom
+            &_2
+                background-image: url("../img/stage-tablet-2.svg")
+            &_3
+                background-image: url("../img/stage-tablet-3.svg")
+@media (max-width: #{map-get($grid-breakpoints, md)-1})
+    .landing-stages
+        padding: 30px 0 14px 0
+        &__headline
+            margin: 0 0 35px 0
+            font-size: 26px
+            line-height: 31px
+            text-align: center
+        &__stage-indent
+            margin: 0 0 16px 0
+        &__stage
+            padding: 30px 20px 40px 20px
+            &_1
+                background-image: url("../img/stage-mobile.svg")
+                background-position: left bottom
+            &_2
+                background-image: url("../img/stage-mobile.svg")
+            &_3
+                background-image: url("../img/stage-mobile.svg")
+            &__name
+                font-size: 24px
+                line-height: 28px
+                margin: 0 0 14px 0
+            &__description
+                font-size: 14px
+                line-height: 150%

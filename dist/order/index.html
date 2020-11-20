@@ -45,11 +45,11 @@
       
       
     </script><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="assets/css/main.css?v-1605601179512" rel="stylesheet"><link rel="shortcut icon" href="favicon.ico">
+    <link href="assets/css/main.css?v-1605879483927" rel="stylesheet"><link rel="shortcut icon" href="assets/favicons/favicon.ico">
   </head>
   <body>
     <div class="navigation-pages">
-      <div class="navigation-pages__shell"><a href="" onclick="routeAnimation(event)">Главная страница</a><a href="surnames" onclick="routeAnimation(event)">Фамилии</a><a href="result-of-search" onclick="routeAnimation(event)">Результат поиска</a><a href="search-without-results" onclick="routeAnimation(event)">Поиска без результата</a><a href="localities" onclick="routeAnimation(event)">Hаселенные пункты</a><a href="human-settlement" onclick="routeAnimation(event)">Населенный пункт</a><a href="documents" onclick="routeAnimation(event)">Документы</a><a href="login-and-registration" onclick="routeAnimation(event)">Авторизация и регистрация</a><a href="my-data" onclick="routeAnimation(event)">Мои данные</a><a href="orders" onclick="routeAnimation(event)">Заказы</a><a href="order" onclick="routeAnimation(event)">Заказ</a><a href="page-without-orders" onclick="routeAnimation(event)">Страница без заказов</a><a href="are-you-sure" onclick="routeAnimation(event)">Окно выхода</a><a href="chat" onclick="routeAnimation(event)">Чат с исполнителем</a><a href="management" onclick="routeAnimation(event)">Руководство</a><a href="goals-and-objectives" onclick="routeAnimation(event)">Цели и задачи</a><a href="job-openings" onclick="routeAnimation(event)">Вакансии</a><a href="contacts" onclick="routeAnimation(event)">Контакты</a><a href="service-page" onclick="routeAnimation(event)">Услуги</a>
+      <div class="navigation-pages__shell"><a href="" onclick="routeAnimation(event)">Главная страница</a><a href="surnames" onclick="routeAnimation(event)">Фамилии</a><a href="result-of-search" onclick="routeAnimation(event)">Результат поиска</a><a href="search-without-results" onclick="routeAnimation(event)">Поиска без результата</a><a href="localities" onclick="routeAnimation(event)">Hаселенные пункты</a><a href="human-settlement" onclick="routeAnimation(event)">Населенный пункт</a><a href="documents" onclick="routeAnimation(event)">Документы</a><a href="login-and-registration" onclick="routeAnimation(event)">Авторизация и регистрация</a><a href="my-data" onclick="routeAnimation(event)">Мои данные</a><a href="orders" onclick="routeAnimation(event)">Заказы</a><a href="order" onclick="routeAnimation(event)">Заказ</a><a href="page-without-orders" onclick="routeAnimation(event)">Страница без заказов</a><a href="are-you-sure" onclick="routeAnimation(event)">Окно выхода</a><a href="chat" onclick="routeAnimation(event)">Чат с исполнителем</a><a href="management" onclick="routeAnimation(event)">Руководство</a><a href="goals-and-objectives" onclick="routeAnimation(event)">Цели и задачи</a><a href="job-openings" onclick="routeAnimation(event)">Вакансии</a><a href="contacts" onclick="routeAnimation(event)">Контакты</a><a href="service-page" onclick="routeAnimation(event)">Услуги</a><a href="landing-1" onclick="routeAnimation(event)">Лендинг - 1</a><a href="landing-2" onclick="routeAnimation(event)">Лендинг - 2</a><a href="landing-3" onclick="routeAnimation(event)">Лендинг - 3</a><a href="events" onclick="routeAnimation(event)">События</a><a href="articles" onclick="routeAnimation(event)">Статьи</a><a href="news" onclick="routeAnimation(event)">Новости</a><a href="not-found" onclick="routeAnimation(event)">404</a><a href="article" onclick="routeAnimation(event)">Статья</a><a href="event" onclick="routeAnimation(event)">Событие</a><a href="password-recovery-1" onclick="routeAnimation(event)">Восстановление пароля 1</a><a href="password-recovery-2" onclick="routeAnimation(event)">Восстановление пароля 2</a><a href="password-recovery-success" onclick="routeAnimation(event)">Успешное восстановление пароля</a>
       </div>
       <button class="navigation-pages__button" onclick="openNavigationPages()"></button>
     </div>
@@ -70,11 +70,13 @@
                               <div class="header__language__dropdown"><a class="header__language__dropdown__line header__language__dropdown__line_current" href="./"><img class="header__language__dropdown__line__icon" src="assets/img/ru.svg"><span class="header__language__dropdown__line__text">Русский</span></a><a class="header__language__dropdown__line" href="./"><img class="header__language__dropdown__line__icon" src="assets/img/tartar.svg"><span class="header__language__dropdown__line__text">Татарский</span></a><a class="header__language__dropdown__line" href="./"><img class="header__language__dropdown__line__icon" src="assets/img/en.svg"><span class="header__language__dropdown__line__text">Английский</span></a></div>
                             </div>
                           </div>
-                          <div class="header__right">
-                            <div class="header__desktop"><a class="header__profile-desktop" href="login-and-registration"><img class="header__profile-desktop__picture" src="assets/img/desktop-user.svg"><span class="header__profile-desktop__text">Личный кабинет</span></a></div>
-                            <div class="header__mobile"><a class="header__profile-mobile" href="login-and-registration"><img class="header__profile-mobile__picture" src="assets/img/mobile-user.svg"></a>
-                              <button class="header__burger" onclick="openWindowMenu()"><img class="header__burger__picture" src="assets/img/burger.svg"></button>
+                          <div class="header__right"> 
+                            <div class="header__profile">
+                              <button class="header__profile__close" onclick="closeProfileDropdown()"></button>
+                              <button class="header__profile__shell" onclick="openProfileDropdown()"><img class="header__profile__shell__picture" src="assets/tmp/avatar.jpg"><span class="header__profile__shell__text">Иван С.</span></button>
+                              <div class="header__profile__dropdown"><a class="header__profile__dropdown__link header__profile__dropdown__link_data" href="#">Мои данные </a><a class="header__profile__dropdown__link header__profile__dropdown__link_basket" href="#">Заказы</a><a class="header__profile__dropdown__exit" href="#">Выйти</a></div>
                             </div>
+                            <button class="header__burger" onclick="openWindowMenu()"><img class="header__burger__picture" src="assets/img/burger.svg"></button>
                           </div>
                         </div>
                       </div>
@@ -88,7 +90,7 @@
                         <div class="menu-main__between">
                           <div class="menu-main__left"><a class="menu-main__logo" href=""><img class="menu-main__logo__image" src="assets/img/logo-blue.svg"><span class="menu-main__logo__right"><span class="menu-main__logo__right__top">Генеалогия</span><span class="menu-main__logo__right__bottom">Татарский портал генеалогических данных </span></span></a></div>
                           <div class="menu-main__right">
-                            <div class="menu-main__links"><a class="menu-main__link menu-main__link_active" href="">Главная</a><a class="menu-main__link" href="surnames">База знаний</a><a class="menu-main__link" href="#">Новости</a><a class="menu-main__link" href="#">События</a><a class="menu-main__link" href="#">Статьи</a><a class="menu-main__link" href="#">Услуги</a><a class="menu-main__link" href="#">Информация</a></div>
+                            <div class="menu-main__links"><a class="menu-main__link " href="">Главная</a><a class="menu-main__link " href="surnames">База знаний</a><a class="menu-main__link " href="#">Новости</a><a class="menu-main__link " href="#">События</a><a class="menu-main__link " href="#">Статьи</a><a class="menu-main__link " href="#">Услуги</a><a class="menu-main__link " href="#">Информация</a></div>
                           </div>
                         </div>
                       </div>
@@ -240,6 +242,6 @@
   </div>
 </footer>
     </div>
-    <script src="assets/js/common.js?v-1605601179512"></script>
+    <script src="assets/js/common.js?v-1605879483927"></script>
   </body>
 </html>

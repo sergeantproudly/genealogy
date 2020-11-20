@@ -5,131 +5,132 @@ block title
 
 
 block content
-    .stick__top
-        include ../includes/header.pug
-        +header()
-        section.my-data
-            .container
-                .row
-                    .col-lg-12
-                        .tabs-with-headline
-                            h2.tabs-with-headline__headline Личный кабинет
-                            .tabs-with-headline__tabs
-                                a(
-                                    href="my-data"
-                                ).tabs-with-headline__tab.tabs-with-headline__tab_active 
-                                    span.tabs-with-headline__tab__text Мои данные
-                                a( 
-                                    href="orders"
-                                ).tabs-with-headline__tab 
-                                    span.tabs-with-headline__tab__text Заказы
-                        h1.my-data__headline Мои данные
-                        .my-data__avatar
-                            .my-data__avatar__left
-                                input(
-                                    type="file"
-                                ).my-data__avatar__input-left
-                                img(
-                                    src="assets/tmp/avatar.jpg"
-                                ).my-data__avatar__image
-                                // .my-data__avatar__empty
-                            .my-data__avatar__right
-                                p.my-data__avatar__name Фотография
-                                .my-data__avatar__actions
-                                    label.my-data__avatar__download
-                                        <svg class="my-data__avatar__download__plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.75 4.25H7.25V7.25H4.25V8.75H7.25V11.75H8.75V8.75H11.75V7.25H8.75V4.25ZM8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.6925 14 2 11.3075 2 8C2 4.6925 4.6925 2 8 2C11.3075 2 14 4.6925 14 8C14 11.3075 11.3075 14 8 14Z" fill="#3B5C9F"/>
-                                        </svg>
-                                        span.my-data__avatar__download__text Загрузить новую
-                                        input(
-                                            type="file"
-                                        ).my-data__avatar__download__input
-                                    button.my-data__avatar__delete
-                                        <svg class="my-data__avatar__delete__basket" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3 6H11V16H3V6ZM10.5 1L9.5 0H4.5L3.5 1H0V3H14V1H10.5Z" fill="#B9C1D1"/>
-                                        </svg>
-                                        span.my-data__avatar__delete__text Удалить
-                        form.my-data__form
-                            label.default-field-with-label
-                                // default-field-with-label_error
-                                span.default-field-with-label__label Фамилия
-                                input(
-                                    type="text"
-                                    placeholder=""
-                                    value="Светлов"
-                                ).default-field-with-label__field
-                                span.default-field-with-label__error Такой фамилии не существует
-                            label.default-field-with-label
-                                // default-field-with-label_error
-                                span.default-field-with-label__label Имя
-                                input(
-                                    type="text"
-                                    placeholder=""
-                                    value="Иван"
-                                ).default-field-with-label__field
-                                span.default-field-with-label__error Такой фамилии не существует
-                            label.default-field-with-label
-                                // default-field-with-label_error
-                                span.default-field-with-label__label Отчество
-                                input(
-                                    type="text"
-                                    placeholder=""
-                                    value="Федорович"
-                                ).default-field-with-label__field
-                                span.default-field-with-label__error Такой фамилии не существует
-                            label.default-field-with-label
-                                // default-field-with-label_error
-                                span.default-field-with-label__label Дата рождения
-                                input(
-                                    type="text"
-                                    
-                                    placeholder=""
-                                    value="12.09.1980"
-                                    datepicker
-                                ).default-field-with-label__field    
-                                span.default-field-with-label__error Такой фамилии не существует
-                            
-                            .default-radio
-                                p.default-radio__label Пол
-                                .default-radio__chooses
-                                    label.default-radio__choose
-                                        input(
-                                            type="radio"
-                                            name="1"
-                                            checked
-                                        ).default-radio__choose__input
-                                        span.default-radio__choose__cell
-                                        span.default-radio__choose__text Мужской
-                                    label.default-radio__choose
-                                        input(
-                                            type="radio"
-                                            name="1"
-                                        ).default-radio__choose__input
-                                        span.default-radio__choose__cell
-                                        span.default-radio__choose__text Женский
-
-                            label.default-field-with-label
-                                // default-field-with-label_error
-                                span.default-field-with-label__label Email
-                                input(
-                                    type="email"
-                                    placeholder=""
-                                    value="svetlov@gmail.com"
-                                ).default-field-with-label__field
-                                span.default-field-with-label__error Такой фамилии не существует
-                            label.default-field-with-label
-                                // default-field-with-label_error
-                                span.default-field-with-label__label Телефон
-                                input(
-                                    type="text"
-                                    placeholder=""
-                                    value="+7 (966) 374-46-12"
-                                ).default-field-with-label__field
-                                span.default-field-with-label__error Такой фамилии не существует
-                            button(
-                            ).default-button.default-button_short.my-data__form__save
-                                // disabled
-                                // default-button_loader
-                                span.default-button__text Сохранить
+    .stick
+        .stick__top
+            include ../includes/header.pug
+            +header({current: "home", profile: 1})
+            section.my-data
+                .container
+                    .row
+                        .col-lg-12
+                            .tabs-with-headline
+                                h2.tabs-with-headline__headline Личный кабинет
+                                .tabs-with-headline__tabs
+                                    a(
+                                        href="my-data"
+                                    ).tabs-with-headline__tab.tabs-with-headline__tab_active 
+                                        span.tabs-with-headline__tab__text Мои данные
+                                    a( 
+                                        href="orders"
+                                    ).tabs-with-headline__tab 
+                                        span.tabs-with-headline__tab__text Заказы
+                            h1.my-data__headline Мои данные
+                            .my-data__avatar
+                                .my-data__avatar__left
+                                    input(
+                                        type="file"
+                                    ).my-data__avatar__input-left
+                                    img(
+                                        src="assets/tmp/avatar.jpg"
+                                    ).my-data__avatar__image
+                                    // .my-data__avatar__empty
+                                .my-data__avatar__right
+                                    p.my-data__avatar__name Фотография
+                                    .my-data__avatar__actions
+                                        label.my-data__avatar__download
+                                            <svg class="my-data__avatar__download__plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.75 4.25H7.25V7.25H4.25V8.75H7.25V11.75H8.75V8.75H11.75V7.25H8.75V4.25ZM8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.6925 14 2 11.3075 2 8C2 4.6925 4.6925 2 8 2C11.3075 2 14 4.6925 14 8C14 11.3075 11.3075 14 8 14Z" fill="#3B5C9F"/>
+                                            </svg>
+                                            span.my-data__avatar__download__text Загрузить новую
+                                            input(
+                                                type="file"
+                                            ).my-data__avatar__download__input
+                                        button.my-data__avatar__delete
+                                            <svg class="my-data__avatar__delete__basket" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3 6H11V16H3V6ZM10.5 1L9.5 0H4.5L3.5 1H0V3H14V1H10.5Z" fill="#B9C1D1"/>
+                                            </svg>
+                                            span.my-data__avatar__delete__text Удалить
+                            form.my-data__form
+                                label.default-field-with-label
+                                    // default-field-with-label_error
+                                    span.default-field-with-label__label Фамилия
+                                    input(
+                                        type="text"
+                                        placeholder="Ввести"
+                                        value="Светлов"
+                                    ).default-field-with-label__field
+                                    span.default-field-with-label__error Такой фамилии не существует
+                                label.default-field-with-label
+                                    // default-field-with-label_error
+                                    span.default-field-with-label__label Имя
+                                    input(
+                                        type="text"
+                                        placeholder="Ввести"
+                                        value="Иван"
+                                    ).default-field-with-label__field
+                                    span.default-field-with-label__error Такой фамилии не существует
+                                label.default-field-with-label
+                                    // default-field-with-label_error
+                                    span.default-field-with-label__label Отчество
+                                    input(
+                                        type="text"
+                                        placeholder="Ввести"
+                                        value="Федорович"
+                                    ).default-field-with-label__field
+                                    span.default-field-with-label__error Такой фамилии не существует
+                                label.default-field-with-label
+                                    // default-field-with-label_error
+                                    span.default-field-with-label__label Дата рождения
+                                    input(
+                                        type="text"
+                                        
+                                        placeholder="Ввести"
+                                        value="12.09.1980"
+                                        datepicker
+                                    ).default-field-with-label__field    
+                                    span.default-field-with-label__error Такой фамилии не существует
                                 
-    include ../includes/footer.pug
+                                .default-radio
+                                    p.default-radio__label Пол
+                                    .default-radio__chooses
+                                        label.default-radio__choose
+                                            input(
+                                                type="radio"
+                                                name="1"
+                                                checked
+                                            ).default-radio__choose__input
+                                            span.default-radio__choose__cell
+                                            span.default-radio__choose__text Мужской
+                                        label.default-radio__choose
+                                            input(
+                                                type="radio"
+                                                name="1"
+                                            ).default-radio__choose__input
+                                            span.default-radio__choose__cell
+                                            span.default-radio__choose__text Женский
+
+                                label.default-field-with-label
+                                    // default-field-with-label_error
+                                    span.default-field-with-label__label Email
+                                    input(
+                                        type="email"
+                                        placeholder="Ввести"
+                                        value="svetlov@gmail.com"
+                                    ).default-field-with-label__field
+                                    span.default-field-with-label__error Такой фамилии не существует
+                                label.default-field-with-label
+                                    // default-field-with-label_error
+                                    span.default-field-with-label__label Телефон
+                                    input(
+                                        type="text"
+                                        placeholder="Ввести"
+                                        value="+7 (966) 374-46-12"
+                                    ).default-field-with-label__field
+                                    span.default-field-with-label__error Такой фамилии не существует
+                                button(
+                                ).default-button.default-button_short.my-data__form__save
+                                    // disabled
+                                    // default-button_loader
+                                    span.default-button__text Сохранить
+                                    
+        include ../includes/footer.pug

@@ -5,47 +5,48 @@ block title
 
 
 block content
-    .stick__top
-        include ../includes/header.pug
-        +header()
-        section.surnames-page
-            .container
-                .row
-                    .col-lg-12
-                        .tabs-with-headline
-                            h2.tabs-with-headline__headline База знаний
-                            .tabs-with-headline__tabs
-                                a(
-                                    href="surnames"
-                                ).tabs-with-headline__tab.tabs-with-headline__tab_active
-                                    span.tabs-with-headline__tab__text Фамилии
-                                a(
-                                    href="localities"
-                                ).tabs-with-headline__tab
-                                    span.tabs-with-headline__tab__text Hаселенные пункты
-                                a(
-                                    href="documents"
-                                ).tabs-with-headline__tab
-                                    span.tabs-with-headline__tab__text Документы
-                        h1.surnames-page__headline Фамилии
-                        form.default-search
-                            input(
-                                type="text"
-                                placeholder="Поиск по фамилии"
-                            ).default-search__field
-                            button.default-search__submit
-                        .result-of-search
-                            h2.result-of-search__headline Найдено 12
-                            .result-of-search__links
-                                a(href="#").result-of-search__link Абакулов
-                                a(href="#").result-of-search__link Абакумов
-                                a(href="#").result-of-search__link Абакшин
-                                a(href="#").result-of-search__link Абалешев
-                                a(href="#").result-of-search__link Абалий
-                                a(href="#").result-of-search__link Абалин
-                                a(href="#").result-of-search__link Абалиш
-                                a(href="#").result-of-search__link Абалия
-                                a(href="#").result-of-search__link Абалмасов
-                                a(href="#").result-of-search__link Абальи
-                                                          
-    include ../includes/footer.pug
+    .stick
+        .stick__top
+            include ../includes/header.pug
+            +header({current: "baza"})
+            section.surnames-page
+                .container
+                    .row
+                        .col-lg-12
+                            .tabs-with-headline
+                                h2.tabs-with-headline__headline База знаний
+                                .tabs-with-headline__tabs
+                                    a(
+                                        href="surnames"
+                                    ).tabs-with-headline__tab.tabs-with-headline__tab_active
+                                        span.tabs-with-headline__tab__text Фамилии
+                                    a(
+                                        href="localities"
+                                    ).tabs-with-headline__tab
+                                        span.tabs-with-headline__tab__text Hаселенные пункты
+                                    a(
+                                        href="documents"
+                                    ).tabs-with-headline__tab
+                                        span.tabs-with-headline__tab__text Документы
+                            h1.surnames-page__headline Фамилии
+                            form.default-search
+                                input(
+                                    type="text"
+                                    placeholder="Поиск по фамилии"
+                                ).default-search__field
+                                button.default-search__submit
+                            .result-of-search
+                                h2.result-of-search__headline Найдено 12
+                                .result-of-search__links
+                                    a(href="#").result-of-search__link Абакулов
+                                    a(href="#").result-of-search__link Абакумов
+                                    a(href="#").result-of-search__link Абакшин
+                                    a(href="#").result-of-search__link Абалешев
+                                    a(href="#").result-of-search__link Абалий
+                                    a(href="#").result-of-search__link Абалин
+                                    a(href="#").result-of-search__link Абалиш
+                                    a(href="#").result-of-search__link Абалия
+                                    a(href="#").result-of-search__link Абалмасов
+                                    a(href="#").result-of-search__link Абальи
+                                                            
+        include ../includes/footer.pug

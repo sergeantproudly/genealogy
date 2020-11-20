@@ -5,115 +5,116 @@ block title
 
 
 block content
-    .stick__top
-        include ../includes/header.pug
-        +header()
-        section.documents-page
-            .container
-                .row
-                    .col-lg-12
-                        .tabs-with-headline
-                            h2.tabs-with-headline__headline База знаний
-                            .tabs-with-headline__tabs
-                                a(
-                                    href="surnames"
-                                ).tabs-with-headline__tab
-                                    span.tabs-with-headline__tab__text Фамилии
-                                a(
-                                    href="localities"
-                                ).tabs-with-headline__tab
-                                    span.tabs-with-headline__tab__text Hаселенные пункты
-                                a(
-                                    href="documents"
-                                ).tabs-with-headline__tab.tabs-with-headline__tab_active
-                                    span.tabs-with-headline__tab__text Документы
-                        h1.documents-page__headline Документы
-                        form.default-search
-                            input(
-                                type="text"
-                                placeholder="Поиск по документам"
-                            ).default-search__field
-                            button.default-search__submit
-                        .documents-page__documents
-                            a(href="#").documents-page__document
-                                span.documents-page__document__icon
-                                    img(
-                                        src="assets/img/doc.svg"
-                                    ).documents-page__document__icon__picture
-                                span.documents-page__document__info
-                                    span.documents-page__document__name Архив учреждения с нуля
-                                    span.documents-page__document__size PDF, 844 КБ
-                            a(href="#").documents-page__document
-                                span.documents-page__document__icon
-                                    img(
-                                        src="assets/img/doc.svg"
-                                    ).documents-page__document__icon__picture
-                                span.documents-page__document__info
-                                    span.documents-page__document__name Составление описей дел постоянного хранения и по личному составу
-                                    span.documents-page__document__size PDF, 844 КБ
-                            a(href="#").documents-page__document
-                                span.documents-page__document__icon
-                                    img(
-                                        src="assets/img/doc.svg"
-                                    ).documents-page__document__icon__picture
-                                span.documents-page__document__info
-                                    span.documents-page__document__name Номенклатура дел организации: как навести порядок в документах
-                                    span.documents-page__document__size PDF, 844 КБ
-                            a(href="#").documents-page__document
-                                span.documents-page__document__icon
-                                    img(
-                                        src="assets/img/doc.svg"
-                                    ).documents-page__document__icon__picture
-                                span.documents-page__document__info
-                                    span.documents-page__document__name Перечень документов, образующихся в процессе деятельности Министерства образования и науки Республики Татарстан и его подведомственных организаций, с указанием сроков хранения
-                                    span.documents-page__document__size PDF, 844 КБ
-                            a(href="#").documents-page__document
-                                span.documents-page__document__icon
-                                    img(
-                                        src="assets/img/doc.svg"
-                                    ).documents-page__document__icon__picture
-                                span.documents-page__document__info
-                                    span.documents-page__document__name Методические рекомендации по усовершенствованию и переработке описей дел
-                                    span.documents-page__document__size PDF, 844 КБ
-                            a(href="#").documents-page__document
-                                span.documents-page__document__icon
-                                    img(
-                                        src="assets/img/doc.svg"
-                                    ).documents-page__document__icon__picture
-                                span.documents-page__document__info
-                                    span.documents-page__document__name Архив учреждения с нуля
-                                    span.documents-page__document__size PDF, 844 КБ
-                            a(href="#").documents-page__document
-                                span.documents-page__document__icon
-                                    img(
-                                        src="assets/img/doc.svg"
-                                    ).documents-page__document__icon__picture
-                                span.documents-page__document__info
-                                    span.documents-page__document__name Составление описей дел постоянного хранения и по личному составу
-                                    span.documents-page__document__size PDF, 844 КБ
-                            a(href="#").documents-page__document
-                                span.documents-page__document__icon
-                                    img(
-                                        src="assets/img/doc.svg"
-                                    ).documents-page__document__icon__picture
-                                span.documents-page__document__info
-                                    span.documents-page__document__name Номенклатура дел организации: как навести порядок в документах
-                                    span.documents-page__document__size PDF, 844 КБ
-                            a(href="#").documents-page__document
-                                span.documents-page__document__icon
-                                    img(
-                                        src="assets/img/doc.svg"
-                                    ).documents-page__document__icon__picture
-                                span.documents-page__document__info
-                                    span.documents-page__document__name Перечень документов, образующихся в процессе деятельности Министерства образования и науки Республики Татарстан и его подведомственных организаций, с указанием сроков хранения
-                                    span.documents-page__document__size PDF, 844 КБ
-                            a(href="#").documents-page__document
-                                span.documents-page__document__icon
-                                    img(
-                                        src="assets/img/doc.svg"
-                                    ).documents-page__document__icon__picture
-                                span.documents-page__document__info
-                                    span.documents-page__document__name Методические рекомендации по усовершенствованию и переработке описей дел
-                                    span.documents-page__document__size PDF, 844 КБ
-                                                          
-    include ../includes/footer.pug
+    .stick
+        .stick__top
+            include ../includes/header.pug
+            +header({current: "baza"})
+            section.documents-page
+                .container
+                    .row
+                        .col-lg-12
+                            .tabs-with-headline
+                                h2.tabs-with-headline__headline База знаний
+                                .tabs-with-headline__tabs
+                                    a(
+                                        href="surnames"
+                                    ).tabs-with-headline__tab
+                                        span.tabs-with-headline__tab__text Фамилии
+                                    a(
+                                        href="localities"
+                                    ).tabs-with-headline__tab
+                                        span.tabs-with-headline__tab__text Hаселенные пункты
+                                    a(
+                                        href="documents"
+                                    ).tabs-with-headline__tab.tabs-with-headline__tab_active
+                                        span.tabs-with-headline__tab__text Документы
+                            h1.documents-page__headline Документы
+                            form.default-search
+                                input(
+                                    type="text"
+                                    placeholder="Поиск по документам"
+                                ).default-search__field
+                                button.default-search__submit
+                            .documents-page__documents
+                                a(href="#").documents-page__document
+                                    span.documents-page__document__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).documents-page__document__icon__picture
+                                    span.documents-page__document__info
+                                        span.documents-page__document__name Архив учреждения с нуля
+                                        span.documents-page__document__size PDF, 844 КБ
+                                a(href="#").documents-page__document
+                                    span.documents-page__document__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).documents-page__document__icon__picture
+                                    span.documents-page__document__info
+                                        span.documents-page__document__name Составление описей дел постоянного хранения и по личному составу
+                                        span.documents-page__document__size PDF, 844 КБ
+                                a(href="#").documents-page__document
+                                    span.documents-page__document__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).documents-page__document__icon__picture
+                                    span.documents-page__document__info
+                                        span.documents-page__document__name Номенклатура дел организации: как навести порядок в документах
+                                        span.documents-page__document__size PDF, 844 КБ
+                                a(href="#").documents-page__document
+                                    span.documents-page__document__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).documents-page__document__icon__picture
+                                    span.documents-page__document__info
+                                        span.documents-page__document__name Перечень документов, образующихся в процессе деятельности Министерства образования и науки Республики Татарстан и его подведомственных организаций, с указанием сроков хранения
+                                        span.documents-page__document__size PDF, 844 КБ
+                                a(href="#").documents-page__document
+                                    span.documents-page__document__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).documents-page__document__icon__picture
+                                    span.documents-page__document__info
+                                        span.documents-page__document__name Методические рекомендации по усовершенствованию и переработке описей дел
+                                        span.documents-page__document__size PDF, 844 КБ
+                                a(href="#").documents-page__document
+                                    span.documents-page__document__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).documents-page__document__icon__picture
+                                    span.documents-page__document__info
+                                        span.documents-page__document__name Архив учреждения с нуля
+                                        span.documents-page__document__size PDF, 844 КБ
+                                a(href="#").documents-page__document
+                                    span.documents-page__document__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).documents-page__document__icon__picture
+                                    span.documents-page__document__info
+                                        span.documents-page__document__name Составление описей дел постоянного хранения и по личному составу
+                                        span.documents-page__document__size PDF, 844 КБ
+                                a(href="#").documents-page__document
+                                    span.documents-page__document__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).documents-page__document__icon__picture
+                                    span.documents-page__document__info
+                                        span.documents-page__document__name Номенклатура дел организации: как навести порядок в документах
+                                        span.documents-page__document__size PDF, 844 КБ
+                                a(href="#").documents-page__document
+                                    span.documents-page__document__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).documents-page__document__icon__picture
+                                    span.documents-page__document__info
+                                        span.documents-page__document__name Перечень документов, образующихся в процессе деятельности Министерства образования и науки Республики Татарстан и его подведомственных организаций, с указанием сроков хранения
+                                        span.documents-page__document__size PDF, 844 КБ
+                                a(href="#").documents-page__document
+                                    span.documents-page__document__icon
+                                        img(
+                                            src="assets/img/doc.svg"
+                                        ).documents-page__document__icon__picture
+                                    span.documents-page__document__info
+                                        span.documents-page__document__name Методические рекомендации по усовершенствованию и переработке описей дел
+                                        span.documents-page__document__size PDF, 844 КБ
+                                                            
+        include ../includes/footer.pug

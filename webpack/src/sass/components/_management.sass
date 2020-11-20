@@ -17,6 +17,21 @@
     &__member
         width: 25%
         margin: 0 0 52px 0
+        &__face
+            position: relative
+            border-radius: 3px
+            overflow: hidden
+        &__cover
+            width: 100%
+            height: auto
+        &__picture
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            display: block
         &__indent
             margin: 0 25px
             background: #FFFFFF
@@ -31,12 +46,6 @@
             // box-shadow: 0px 18px 34px #E7EAF1
             // transform: scale(1.03)
             // opacity: 0.8
-        &__picture
-            width: 100%
-            height: 300px
-            object-fit: cover
-            border-radius: 3px
-            display: block
         &__info
             padding: 30px 19px 32px 19px
             display: block
@@ -67,7 +76,7 @@
             &__indent
                 margin: 0 15px
             &__picture
-                height: 245px
+                // height: 245px
             &__info
                 padding: 25px 16px 26px 16px
             &__name
@@ -94,7 +103,7 @@
             &__indent
                 margin: 0 7px
             &__picture
-                height: 155px
+                // height: 155px
             &__info
                 padding: 19px 7px 21px 7px
             &__name

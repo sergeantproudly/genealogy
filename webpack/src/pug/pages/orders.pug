@@ -5,83 +5,84 @@ block title
 
 
 block content
-    .stick__top
-        include ../includes/header.pug
-        +header()
-        section.orders-page
-            .container
-                .row
-                    .col-lg-12
-                        .tabs-with-headline
-                            h2.tabs-with-headline__headline Личный кабинет
-                            .tabs-with-headline__tabs
-                                a(
-                                    href="my-data"
-                                ).tabs-with-headline__tab
-                                    span.tabs-with-headline__tab__text Мои данные
-                                a(
-                                    href="orders"
-                                ).tabs-with-headline__tab.tabs-with-headline__tab_active 
-                                    span.tabs-with-headline__tab__text Заказы
-                        h1.orders-page__headline Заказы
-                        .orders-page__orders
-                            .orders-page__order
-                                .orders-page__order__value.orders-page__order__col-1
-                                    p.orders-page__order__value__label Дата заказа
-                                    p.orders-page__order__value__text 20.09.2020
-                                .orders-page__order__value.orders-page__order__col-2
-                                    p.orders-page__order__value__label Номер заказа
-                                    p.orders-page__order__value__text 383623
-                                .orders-page__order__value.orders-page__order__col-3
-                                    p.orders-page__order__value__label Услуга
-                                    p.orders-page__order__value__text Проведение генеалогического исследования
-                                .orders-page__order__value.orders-page__order__col-4
-                                    p.orders-page__order__value__label Статус
-                                    p.orders-page__order__value__text.orders-page__order__value__text_done Заказ выполнен
-                                        // .orders-page__order__value__text_pending
-                                        // .orders-page__order__value__text_in-process
-                                .orders-page__order__actions.orders-page__order__col-5
-                                    button.orders-page__order__delete Удалить заказ
+    .stick
+        .stick__top
+            include ../includes/header.pug
+            +header({current: "", profile: 1})
+            section.orders-page
+                .container
+                    .row
+                        .col-lg-12
+                            .tabs-with-headline
+                                h2.tabs-with-headline__headline Личный кабинет
+                                .tabs-with-headline__tabs
                                     a(
-                                        href="order"
-                                    ).orders-page__order__view Смотреть
-                            .orders-page__order
-                                .orders-page__order__value.orders-page__order__col-1
-                                    p.orders-page__order__value__label Дата заказа
-                                    p.orders-page__order__value__text 20.09.2020
-                                .orders-page__order__value.orders-page__order__col-2
-                                    p.orders-page__order__value__label Номер заказа
-                                    p.orders-page__order__value__text 383623
-                                .orders-page__order__value.orders-page__order__col-3
-                                    p.orders-page__order__value__label Услуга
-                                    p.orders-page__order__value__text Построение генеалогического древа
-                                .orders-page__order__value.orders-page__order__col-4
-                                    p.orders-page__order__value__label Статус
-                                    p.orders-page__order__value__text.orders-page__order__value__text_pending Ожидает оплаты
-                                        // .orders-page__order__value__text_pending
-                                        // .orders-page__order__value__text_in-process
-                                .orders-page__order__actions.orders-page__order__col-5
+                                        href="my-data"
+                                    ).tabs-with-headline__tab
+                                        span.tabs-with-headline__tab__text Мои данные
                                     a(
-                                        href="order"
-                                    ).orders-page__order__view Смотреть
-                            .orders-page__order
-                                .orders-page__order__value.orders-page__order__col-1
-                                    p.orders-page__order__value__label Дата заказа
-                                    p.orders-page__order__value__text 20.09.2020
-                                .orders-page__order__value.orders-page__order__col-2
-                                    p.orders-page__order__value__label Номер заказа
-                                    p.orders-page__order__value__text 383623
-                                .orders-page__order__value.orders-page__order__col-3
-                                    p.orders-page__order__value__label Услуга
-                                    p.orders-page__order__value__text Проведение генеалогического исследования
-                                .orders-page__order__value.orders-page__order__col-4
-                                    p.orders-page__order__value__label Статус
-                                    p.orders-page__order__value__text.orders-page__order__value__text_in-process Выполняется
-                                        // .orders-page__order__value__text_pending
-                                        // .orders-page__order__value__text_in-process
-                                .orders-page__order__actions.orders-page__order__col-5
-                                    a(
-                                        href="order"
-                                    ).orders-page__order__view Смотреть
-                                
-    include ../includes/footer.pug
+                                        href="orders"
+                                    ).tabs-with-headline__tab.tabs-with-headline__tab_active 
+                                        span.tabs-with-headline__tab__text Заказы
+                            h1.orders-page__headline Заказы
+                            .orders-page__orders
+                                .orders-page__order
+                                    .orders-page__order__value.orders-page__order__col-1
+                                        p.orders-page__order__value__label Дата заказа
+                                        p.orders-page__order__value__text 20.09.2020
+                                    .orders-page__order__value.orders-page__order__col-2
+                                        p.orders-page__order__value__label Номер заказа
+                                        p.orders-page__order__value__text 383623
+                                    .orders-page__order__value.orders-page__order__col-3
+                                        p.orders-page__order__value__label Услуга
+                                        p.orders-page__order__value__text Проведение генеалогического исследования
+                                    .orders-page__order__value.orders-page__order__col-4
+                                        p.orders-page__order__value__label Статус
+                                        p.orders-page__order__value__text.orders-page__order__value__text_done Заказ выполнен
+                                            // .orders-page__order__value__text_pending
+                                            // .orders-page__order__value__text_in-process
+                                    .orders-page__order__actions.orders-page__order__col-5
+                                        button.orders-page__order__delete Удалить заказ
+                                        a(
+                                            href="order"
+                                        ).orders-page__order__view Смотреть
+                                .orders-page__order
+                                    .orders-page__order__value.orders-page__order__col-1
+                                        p.orders-page__order__value__label Дата заказа
+                                        p.orders-page__order__value__text 20.09.2020
+                                    .orders-page__order__value.orders-page__order__col-2
+                                        p.orders-page__order__value__label Номер заказа
+                                        p.orders-page__order__value__text 383623
+                                    .orders-page__order__value.orders-page__order__col-3
+                                        p.orders-page__order__value__label Услуга
+                                        p.orders-page__order__value__text Построение генеалогического древа
+                                    .orders-page__order__value.orders-page__order__col-4
+                                        p.orders-page__order__value__label Статус
+                                        p.orders-page__order__value__text.orders-page__order__value__text_pending Ожидает оплаты
+                                            // .orders-page__order__value__text_pending
+                                            // .orders-page__order__value__text_in-process
+                                    .orders-page__order__actions.orders-page__order__col-5
+                                        a(
+                                            href="order"
+                                        ).orders-page__order__view Смотреть
+                                .orders-page__order
+                                    .orders-page__order__value.orders-page__order__col-1
+                                        p.orders-page__order__value__label Дата заказа
+                                        p.orders-page__order__value__text 20.09.2020
+                                    .orders-page__order__value.orders-page__order__col-2
+                                        p.orders-page__order__value__label Номер заказа
+                                        p.orders-page__order__value__text 383623
+                                    .orders-page__order__value.orders-page__order__col-3
+                                        p.orders-page__order__value__label Услуга
+                                        p.orders-page__order__value__text Проведение генеалогического исследования
+                                    .orders-page__order__value.orders-page__order__col-4
+                                        p.orders-page__order__value__label Статус
+                                        p.orders-page__order__value__text.orders-page__order__value__text_in-process Выполняется
+                                            // .orders-page__order__value__text_pending
+                                            // .orders-page__order__value__text_in-process
+                                    .orders-page__order__actions.orders-page__order__col-5
+                                        a(
+                                            href="order"
+                                        ).orders-page__order__view Смотреть
+                                    
+        include ../includes/footer.pug

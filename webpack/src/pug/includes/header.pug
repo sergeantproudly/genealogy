@@ -1,4 +1,6 @@
-mixin header()
+mixin header(arg)
+    - let profile = arg ? arg.profile ? arg.profile : "" : ""
+    - let current = arg ? arg.current ? arg.current : "" : ""
     header.header
         .container
             .row
@@ -38,28 +40,35 @@ mixin header()
                                             src="assets/img/en.svg"
                                         ).header__language__dropdown__line__icon
                                         span.header__language__dropdown__line__text Английский
-                        .header__right
-                            .header__desktop
+                        .header__right 
+                            if profile == 1
+                                .header__profile
+                                    button(
+                                        onclick="closeProfileDropdown()"
+                                    ).header__profile__close
+                                    button(
+                                        onclick="openProfileDropdown()"
+                                    ).header__profile__shell
+                                        img(
+                                            src="assets/tmp/avatar.jpg"
+                                        ).header__profile__shell__picture
+                                        span.header__profile__shell__text Иван С.
+                                    .header__profile__dropdown
+                                        a(href="#").header__profile__dropdown__link.header__profile__dropdown__link_data Мои данные 
+                                        a(href="#").header__profile__dropdown__link.header__profile__dropdown__link_basket Заказы
+                                        a(href="#").header__profile__dropdown__exit Выйти
+                            else
                                 a(
                                     href="login-and-registration"
-                                ).header__profile-desktop
-                                    img(
-                                        src="assets/img/desktop-user.svg"
-                                    ).header__profile-desktop__picture
-                                    span.header__profile-desktop__text Личный кабинет
-                            .header__mobile
-                                a(
-                                    href="login-and-registration"
-                                ).header__profile-mobile
-                                    img(
-                                        src="assets/img/mobile-user.svg"
-                                    ).header__profile-mobile__picture
-                                button(
-                                    onclick="openWindowMenu()"
-                                ).header__burger
-                                    img(
-                                        src="assets/img/burger.svg"
-                                    ).header__burger__picture
+                                ).header__login
+                                    span.header__login__picture
+                                    span.header__login__text Личный кабинет
+                            button(
+                                onclick="openWindowMenu()"
+                            ).header__burger
+                                img(
+                                    src="assets/img/burger.svg"
+                                ).header__burger__picture
     section.menu-main
         .container
             .row
@@ -79,25 +88,32 @@ mixin header()
                             .menu-main__links
                                 a(
                                     href=""
-                                ).menu-main__link.menu-main__link_active Главная
+                                    class=`menu-main__link ${current == 'home' ?  "menu-main__link_active" : ""}`
+                                ) Главная
                                 a(
                                     href="surnames"
-                                ).menu-main__link База знаний
+                                    class=`menu-main__link ${current == 'baza' ?  "menu-main__link_active" : ""}`
+                                ) База знаний
                                 a(
                                     href="#"
-                                ).menu-main__link Новости
+                                    class=`menu-main__link ${current == 'news' ?  "menu-main__link_active" : ""}`
+                                ) Новости
                                 a(
                                     href="#"
-                                ).menu-main__link События
+                                    class=`menu-main__link ${current == 'events' ?  "menu-main__link_active" : ""}`
+                                ) События
                                 a(
                                     href="#"
-                                ).menu-main__link Статьи
+                                    class=`menu-main__link ${current == 'articles' ?  "menu-main__link_active" : ""}`
+                                ) Статьи
                                 a(
                                     href="#"
-                                ).menu-main__link Услуги
+                                    class=`menu-main__link ${current == 'serv' ?  "menu-main__link_active" : ""}`
+                                ) Услуги
                                 a(
                                     href="#"
-                                ).menu-main__link Информация
+                                    class=`menu-main__link ${current == 'info' ?  "menu-main__link_active" : ""}`
+                                ) Информация
     .menu-window
         div(
             onclick="closeWindowMenu()"
